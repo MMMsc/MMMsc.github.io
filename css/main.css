@@ -1525,8 +1525,12 @@ pre .javascript .function {
     display: none;
   }
 }
-.post-button {
-  margin-top: 40px;
+.post-button .post-eof {
+  display: block;
+  width: 0%;
+  height: 0px;
+  background: #ccc;
+  text-align: center;
 }
 .posts-expand .post-tags {
   margin-top: 40px;
@@ -1762,7 +1766,7 @@ pre .javascript .function {
   width: 4px;
   height: 4px;
   border-radius: 50%;
-  background: #c6fff2;
+  background: #0ebaff;
 }
 .feed-link,
 .chat {
