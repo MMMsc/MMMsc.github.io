@@ -103,7 +103,6 @@
 <meta property="og:site_name" content="Just Mess">
 <meta property="og:description" content="—## title: 关于组推荐的论文阅读总结 总结论文来源：一种改进的偏好融合组推荐方法_百度学术">
 <meta property="og:locale" content="default">
-<meta property="og:image" content="http://yoursite.com/.com//1FDD3966-9F53-4B9D-A4D0-84A086F50112.png">
 <meta property="og:image" content="http://yoursite.com/.com//32D54B5E-81D1-4D13-9067-400C25FB7163.png">
 <meta property="og:image" content="http://yoursite.com/.com//BE0DFAC2-56AE-435C-AB2D-46562E0895B5.png">
 <meta property="og:image" content="http://yoursite.com/.com//4365EE18-F60E-41A0-A39A-EC81312BB21F.png">
@@ -118,11 +117,11 @@
 <meta property="og:image" content="http://yoursite.com/.com//8B9FD8AC-96E3-473F-A6E6-73E618413710.png">
 <meta property="og:image" content="http://yoursite.com/.com//8D9446A1-1789-4D6C-8AB1-D3C4EE790E67.png">
 <meta property="og:image" content="http://yoursite.com/.com//0FAF634D-B630-4CA1-8368-010810E4D1C1.png">
-<meta property="og:updated_time" content="2019-09-06T05:30:13.699Z">
+<meta property="og:updated_time" content="2019-09-06T05:51:53.201Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Just Mess">
 <meta name="twitter:description" content="—## title: 关于组推荐的论文阅读总结 总结论文来源：一种改进的偏好融合组推荐方法_百度学术">
-<meta name="twitter:image" content="http://yoursite.com/.com//1FDD3966-9F53-4B9D-A4D0-84A086F50112.png">
+<meta name="twitter:image" content="http://yoursite.com/.com//32D54B5E-81D1-4D13-9067-400C25FB7163.png">
 
 
 
@@ -351,7 +350,7 @@
                 
               
 
-              <time title="Created: 2019-09-06 13:29:42 / Modified: 13:30:13" itemprop="dateCreated datePublished" datetime="2019-09-06T13:29:42+08:00">2019-09-06</time>
+              <time title="Created: 2019-09-06 13:29:42 / Modified: 13:51:53" itemprop="dateCreated datePublished" datetime="2019-09-06T13:29:42+08:00">2019-09-06</time>
             
 
             
@@ -396,7 +395,7 @@
 <h2 id="组推荐的概念"><a href="#组推荐的概念" class="headerlink" title="组推荐的概念"></a>组推荐的概念</h2><p>不仅以某一个用户的需求为推荐依据，重要考虑群组成员的偏好行为，需要通过建立的算法模型来缩小成员间的偏好差异，使组推荐能够更准确的代表成员的偏好。<br>传统推荐系统使用基于用户的协同过滤、矩阵分解，但仍存在冷启动等问题</p>
 <h3 id="现有的方法："><a href="#现有的方法：" class="headerlink" title="现有的方法："></a>现有的方法：</h3><p>模型融合：存在群组成员公平性问题<br>推荐融合：忽略群组成员的交互<br>对现有组推荐系统使用的偏好融合方法改进，结合了推荐融合和模型融合的有点，提出并论证了“群组偏好与个人偏好有相似性”<br>数据结果：Movielens数据集</p>
 <hr>
-<h2 id="相关概念及解析"><a href="#相关概念及解析" class="headerlink" title="相关概念及解析"></a>相关概念及解析</h2><h3 id="协同过滤系统"><a href="#协同过滤系统" class="headerlink" title="协同过滤系统"></a>协同过滤系统</h3><p>通俗的讲，通过计算与用户喜好最接近的用户来推荐项目，比方，用户A喜欢商品a、b，用户B喜欢商品a、b、c，则向用户A推荐商品c<br>大致过程：1）收集数据 2）找到相似的用户和商品 3）进行推荐<br>根据个人目前掌握程度，将采用欧几里得距离计算<br><img src="/.com//1FDD3966-9F53-4B9D-A4D0-84A086F50112.png" alt></p>
+<h2 id="相关概念及解析"><a href="#相关概念及解析" class="headerlink" title="相关概念及解析"></a>相关概念及解析</h2><h3 id="协同过滤系统"><a href="#协同过滤系统" class="headerlink" title="协同过滤系统"></a>协同过滤系统</h3><p>通俗的讲，通过计算与用户喜好最接近的用户来推荐项目，比方，用户A喜欢商品a、b，用户B喜欢商品a、b、c，则向用户A推荐商品c<br>大致过程：1）收集数据 2）找到相似的用户和商品 3）进行推荐<br>根据个人目前掌握程度，将采用欧几里得距离计算<br></p>
 <p>基于用户的协同过滤：<br>基于用户对商品的偏好，找到偏好相邻的邻居，将邻居偏好的商品推荐给用户<br><img src="/.com//32D54B5E-81D1-4D13-9067-400C25FB7163.png" alt><br>基于商品的协同过滤：<br>基于用户对商品的偏好，找到相似的商品，并根据用户的历史偏好，推荐相似的商品给用户<br><img src="/.com//BE0DFAC2-56AE-435C-AB2D-46562E0895B5.png" alt></p>
 <h3 id="组推荐技术"><a href="#组推荐技术" class="headerlink" title="组推荐技术"></a>组推荐技术</h3><p>一是群组偏好融合策略，融合组内各用户的偏好；二是对成员未购买项目进行预测评分，生成推荐列表<br>在实际应用中需要融合不同的策略来达到最佳推荐效果，但融合的时机、融合的内容不同会带来很多影响。传统推荐模型包括用户偏好获取阶段恶化推荐生成阶段，模型融合的时机将在推荐生成前进行融合，生成群组偏好模型；推荐融合在推荐生成后进行融合，将群组成员的偏好融合得到群组推荐结果</p>
 <p><img src="/.com//4365EE18-F60E-41A0-A39A-EC81312BB21F.png" alt></p>
