@@ -1,0 +1,762 @@
+<!DOCTYPE html>
+
+
+
+
+
+
+
+
+
+
+
+
+  
+
+
+<html class="theme-next muse use-motion" lang>
+<head><meta name="generator" content="Hexo 3.9.0">
+  <meta charset="UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=2">
+<meta name="theme-color" content="#222">
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<link rel="stylesheet" href="/lib/font-awesome/css/font-awesome.min.css?v=4.6.2">
+
+<link rel="stylesheet" href="/css/main.css?v=7.0.1">
+
+
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon-next.png?v=7.0.1">
+
+
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32-next.png?v=7.0.1">
+
+
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16-next.png?v=7.0.1">
+
+
+  <link rel="mask-icon" href="/images/logo.svg?v=7.0.1" color="#222">
+
+
+
+
+
+
+
+<script id="hexo.configurations">
+  var NexT = window.NexT || {};
+  var CONFIG = {
+    root: '/',
+    scheme: 'Muse',
+    version: '7.0.1',
+    sidebar: {"position":"left","display":"post","offset":12,"onmobile":false,"dimmer":false},
+    back2top: true,
+    back2top_sidebar: false,
+    fancybox: false,
+    fastclick: false,
+    lazyload: false,
+    tabs: true,
+    motion: {"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},
+    algolia: {
+      applicationID: '',
+      apiKey: '',
+      indexName: '',
+      hits: {"per_page":10},
+      labels: {"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}
+    }
+  };
+</script>
+
+
+  
+
+
+
+
+  <meta name="description" content="C++&amp;#x7A0B;&amp;#x5E8F;&amp;#x8BBE;&amp;#x8BA1;Day-0x09">
+<meta property="og:type" content="article">
+<meta property="og:title" content="C++程序设计Day-0x09">
+<meta property="og:url" content="http://yoursite.com/passages/C++程序设计Day-0x09/index.html">
+<meta property="og:site_name" content="Just Mess">
+<meta property="og:description" content="C++&amp;#x7A0B;&amp;#x5E8F;&amp;#x8BBE;&amp;#x8BA1;Day-0x09">
+<meta property="og:locale" content="default">
+<meta property="og:updated_time" content="2020-07-16T08:23:24.350Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="C++程序设计Day-0x09">
+<meta name="twitter:description" content="C++&amp;#x7A0B;&amp;#x5E8F;&amp;#x8BBE;&amp;#x8BA1;Day-0x09">
+
+
+
+
+
+
+  <link rel="canonical" href="http://yoursite.com/passages/C++程序设计Day-0x09/">
+
+
+
+<script id="page.configurations">
+  CONFIG.page = {
+    sidebar: "",
+  };
+</script>
+
+  <title>C++程序设计Day-0x09 | Just Mess</title>
+  
+
+
+
+
+
+
+
+
+
+
+
+
+  <noscript>
+  <style>
+  .use-motion .motion-element,
+  .use-motion .brand,
+  .use-motion .menu-item,
+  .sidebar-inner,
+  .use-motion .post-block,
+  .use-motion .pagination,
+  .use-motion .comments,
+  .use-motion .post-header,
+  .use-motion .post-body,
+  .use-motion .collection-title { opacity: initial; }
+
+  .use-motion .logo,
+  .use-motion .site-title,
+  .use-motion .site-subtitle {
+    opacity: initial;
+    top: initial;
+  }
+
+  .use-motion .logo-line-before i { left: initial; }
+  .use-motion .logo-line-after i { right: initial; }
+  </style>
+</noscript>
+
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage" lang="default">
+
+  
+  
+    
+  
+
+  <div class="container sidebar-position-left page-post-detail">
+    <div class="headband"></div>
+
+    <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-brand-wrapper">
+  <div class="site-meta">
+    
+
+    <div class="custom-logo-site-title">
+      <a href="/" class="brand" rel="start">
+        <span class="logo-line-before"><i></i></span>
+        <span class="site-title">Just Mess</span>
+        <span class="logo-line-after"><i></i></span>
+      </a>
+    </div>
+    
+      
+        <p class="site-subtitle">记录日常和乱七八糟哟</p>
+      
+    
+    
+  </div>
+
+  <div class="site-nav-toggle">
+    <button aria-label="Toggle navigation bar">
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+    </button>
+  </div>
+</div>
+
+
+
+<nav class="site-nav">
+  
+    <ul id="menu" class="menu">
+      
+        
+        
+        
+          
+          <li class="menu-item menu-item-home">
+
+    
+    
+    
+      
+    
+
+    
+
+    <a href="/" rel="section"><i class="menu-item-icon fa fa-fw fa-home"></i> <br>Home</a>
+
+  </li>
+        
+        
+        
+          
+          <li class="menu-item menu-item-archives">
+
+    
+    
+    
+      
+    
+
+    
+
+    <a href="/archives/" rel="section"><i class="menu-item-icon fa fa-fw fa-archive"></i> <br>Archives</a>
+
+  </li>
+
+      
+      
+    </ul>
+  
+
+  
+    
+
+  
+
+  
+</nav>
+
+
+
+  
+
+
+
+</div>
+    </header>
+
+    
+
+
+    <main id="main" class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          
+          <div id="content" class="content">
+            
+
+  <div id="posts" class="posts-expand">
+    
+
+  
+
+  
+  
+  
+
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/passages/C++程序设计Day-0x09/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="Ma Sicheng">
+      <meta itemprop="description" content>
+      <meta itemprop="image" content="/images/avatar.gif">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Just Mess">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">C++程序设计Day-0x09
+
+              
+            
+          </h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+
+            
+            
+            
+
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">Posted on</span>
+              
+
+              
+                
+              
+
+              <time title="Created: 2020-07-15 16:23:01" itemprop="dateCreated datePublished" datetime="2020-07-15T16:23:01+08:00">2020-07-15</time>
+            
+
+            
+              
+
+              
+                
+                <span class="post-meta-divider">|</span>
+                
+
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-calendar-check-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">Edited on</span>
+                
+                <time title="Modified: 2020-07-16 16:23:24" itemprop="dateModified" datetime="2020-07-16T16:23:24+08:00">2020-07-16</time>
+              
+            
+          </span>
+
+          
+
+          
+            
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        <h1 id="C-&#x7A0B;&#x5E8F;&#x8BBE;&#x8BA1;Day-0x09"><a href="#C-&#x7A0B;&#x5E8F;&#x8BBE;&#x8BA1;Day-0x09" class="headerlink" title="C++&#x7A0B;&#x5E8F;&#x8BBE;&#x8BA1;Day-0x09"></a>C++&#x7A0B;&#x5E8F;&#x8BBE;&#x8BA1;Day-0x09</h1><a id="more"></a>
+<hr>
+<h1 id="&#x8FD0;&#x7B97;&#x7B26;&#x91CD;&#x8F7D;"><a href="#&#x8FD0;&#x7B97;&#x7B26;&#x91CD;&#x8F7D;" class="headerlink" title="&#x8FD0;&#x7B97;&#x7B26;&#x91CD;&#x8F7D;"></a>&#x8FD0;&#x7B97;&#x7B26;&#x91CD;&#x8F7D;</h1><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br></pre></td><td class="code"><pre><span class="line">class Complex</span><br><span class="line">{</span><br><span class="line">public:</span><br><span class="line">    Complex( ){real = 0; imag = 0;}</span><br><span class="line">    Complex(double r, double i){real = r; imag = i;}</span><br><span class="line">    Complex operator + (Complex &amp;c2); // &#x58F0;&#x660E;&#x91CD;&#x8F7D;&#x8FD0;&#x7B97;&#x7B26;&#x7684;&#x51FD;&#x6570;</span><br><span class="line">    void display( );</span><br><span class="line">private:</span><br><span class="line">    double real;</span><br><span class="line">    double imag;</span><br><span class="line">};</span><br><span class="line"></span><br><span class="line">Complex Complex::operator+(Complex &amp;c2) // &#x5B9A;&#x4E49;&#x91CD;&#x8F7D;&#x8FD0;&#x7B97;&#x7B26;&#x7684;&#x51FD;&#x6570;</span><br><span class="line">{</span><br><span class="line">    Complex c;</span><br><span class="line">    c.real = real + c2.real;</span><br><span class="line">    c.imag = imag + c2.imag;</span><br><span class="line">    return c;</span><br><span class="line">}</span><br><span class="line"></span><br><span class="line">void Complex::display()</span><br><span class="line">{</span><br><span class="line">    cout &lt;&lt; real &lt;&lt; &quot;,&quot; &lt;&lt; imag &lt;&lt; &quot;i&quot; &lt;&lt; endl;</span><br><span class="line">}</span><br><span class="line"></span><br><span class="line">int main( )</span><br><span class="line">{</span><br><span class="line">    Complex c1(3,4), c2(5, -10), c3;</span><br><span class="line">    c3 = c1 + c2; // &#x590D;&#x6570;&#x8FD0;&#x7B97;&#x7B26;+</span><br><span class="line">    cout &lt;&lt; &quot; &quot;;c1.display();</span><br><span class="line">    cout &lt;&lt; &quot; &quot;;c2.display();</span><br><span class="line">    cout &lt;&lt; &quot; &quot;;c3.display();</span><br><span class="line">    return 0;</span><br><span class="line">}</span><br></pre></td></tr></table></figure>
+<p>&#x7531;&#x4E8E;&#x91CD;&#x8F7D;&#x51FD;&#x6570;&#x662F;Complex&#x7C7B;&#x4E2D;&#x7684;&#x5BF9;&#x8C61;&#xFF0C;&#x6709;&#x4E00;&#x4E2A;&#x53C2;&#x6570;&#x662F;&#x9690;&#x542B;&#x7684;&#xFF0C;&#x8FD0;&#x7B97;&#x7B26;&#x51FD;&#x6570;&#x7528;this&#x6307;&#x9488;&#x9690;&#x5F0F;&#x8BBF;&#x95EE;&#x7C7B;&#x5BF9;&#x8C61;&#x7684;&#x6210;&#x5458;&#x3002;&#x5728;&#x4E0A;&#x9762;&#xFF0C;&#x91CD;&#x8F7D;&#x51FD;&#x6570;operator+&#x8BBF;&#x95EE;&#x4E86;&#x4E24;&#x4E2A;&#x5BF9;&#x8C61;&#x4E2D;&#x7684;&#x6210;&#x5458;&#xFF0C;&#x4E00;&#x4E2A;&#x662F;this&#x6307;&#x9488;&#x6307;&#x5411;&#x7684;&#x5BF9;&#x8C61;&#x4E2D;&#x7684;&#x6210;&#x5458;&#xFF0C;&#x4E00;&#x4E2A;&#x662F;&#x5F62;&#x53C2;&#x5BF9;&#x8C61;&#x4E2D;&#x7684;&#x6210;&#x5458;&#x3002;&#x5982;this-&gt;real + c2, this-&gt;real&#x5C31;&#x662F;c1.real&#x3002;</p>
+<ol>
+<li>&#x4E0D;&#x5141;&#x8BB8;&#x5B9A;&#x4E49;&#x65B0;&#x7684;&#x8FD0;&#x7B97;&#x7B26;&#xFF0C;<strong>&#x53EA;&#x80FD;&#x5BF9;&#x5DF2;&#x6709;&#x7684;&#x8FD0;&#x7B97;&#x7B26;&#x91CD;&#x8F7D;</strong></li>
+<li>&#x4E0D;&#x80FD;&#x91CD;&#x8F7D;&#x7684;&#x8FD0;&#x7B97;&#x7B26;&#x6709;&#x4E94;&#x4E2A;&#xFF1A;</li>
+</ol>
+<ul>
+<li>.</li>
+<li>. *</li>
+<li>::</li>
+<li>sizeof</li>
+<li>?:</li>
+</ul>
+<ol start="3">
+<li>&#x91CD;&#x8F7D;&#x4E0D;&#x80FD;&#x6539;&#x53D8;&#x8FD0;&#x7B97;&#x7B26;&#x8FD0;&#x7B97;&#x5BF9;&#x8C61;&#x7684;&#x4E2A;&#x6570;</li>
+<li>&#x91CD;&#x8F7D;&#x4E0D;&#x80FD;&#x6539;&#x53D8;&#x4F18;&#x5148;&#x7EA7;</li>
+<li>&#x91CD;&#x8F7D;&#x4E0D;&#x80FD;&#x6539;&#x53D8;&#x7ED3;&#x5408;&#x6027;</li>
+<li>&#x91CD;&#x8F7D;&#x8FD0;&#x7B97;&#x7B26;&#x7684;&#x51FD;&#x6570;&#x4E0D;&#x80FD;&#x6709;&#x9ED8;&#x8BA4;&#x7684;&#x53C2;&#x6570;</li>
+<li>&#x91CD;&#x8F7D;&#x7684;&#x8FD0;&#x7B97;&#x7B26;&#x5FC5;&#x987B;&#x548C;&#x7528;&#x6237;&#x5B9A;&#x4E49;&#x7684;&#x81EA;&#x5B9A;&#x4E49;&#x7C7B;&#x578B;&#x7684;&#x5BF9;&#x8C61;&#x4E00;&#x8D77;&#x4F7F;&#x7528;<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">int operator + (int a, int b)</span><br><span class="line">{return (a-b);} //&#x975E;&#x6CD5;&#x60C5;&#x51B5;</span><br></pre></td></tr></table></figure>
+</li>
+</ol>
+<h2 id="&#x53CB;&#x5143;&#x91CD;&#x8F7D;"><a href="#&#x53CB;&#x5143;&#x91CD;&#x8F7D;" class="headerlink" title="&#x53CB;&#x5143;&#x91CD;&#x8F7D;"></a>&#x53CB;&#x5143;&#x91CD;&#x8F7D;</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br></pre></td><td class="code"><pre><span class="line">class Complex</span><br><span class="line">{</span><br><span class="line">public:</span><br><span class="line">    Complex( ){real = 0; imag = 0;}</span><br><span class="line">    Complex(double r, double i){real = r; imag = i;}</span><br><span class="line">    friend Complex operator + (Complex &amp;c1 ,Complex &amp;c2); //&#x91CD;&#x8F7D;&#x51FD;&#x6570;&#x4F5C;&#x4E3A;&#x53CB;&#x5143;&#xFF0C;&#x6240;&#x4EE5;&#x9700;&#x8981;&#x628A;c1&#x7ED9;&#x58F0;&#x660E;&#x51FA;&#x6765;</span><br><span class="line">    void display( );</span><br><span class="line">private:</span><br><span class="line">    double real;</span><br><span class="line">    double imag;</span><br><span class="line">};</span><br><span class="line"></span><br><span class="line">Complex operator+(Complex &amp;c1, Complex &amp;c2)</span><br><span class="line">{</span><br><span class="line">    return Complex(c1.real+c2.real, c1.imag+c2.imag);</span><br><span class="line">}</span><br><span class="line"></span><br><span class="line">void Complex::display()</span><br><span class="line">{</span><br><span class="line">    cout &lt;&lt; real &lt;&lt; &quot;,&quot; &lt;&lt; imag &lt;&lt; &quot;i&quot; &lt;&lt; endl;</span><br><span class="line">} // **&#x5BF9;&#x6BD4;&#x4E0A;&#x9762;&#x7684;&#x5F62;&#x5F0F;**</span><br><span class="line"></span><br><span class="line">int main( )</span><br><span class="line">{</span><br><span class="line">    Complex c1(3,4), c2(5, -10), c3;</span><br><span class="line">    c3 = c1 + c2;</span><br><span class="line">    cout &lt;&lt; &quot; &quot;;c1.display();</span><br><span class="line">    cout &lt;&lt; &quot; &quot;;c2.display();</span><br><span class="line">    cout &lt;&lt; &quot; &quot;;c3.display();</span><br><span class="line">    return 0;</span><br><span class="line">}</span><br></pre></td></tr></table></figure>
+<h2 id="&#x91CD;&#x8F7D;&#x8FD0;&#x7B97;&#x7B26;"><a href="#&#x91CD;&#x8F7D;&#x8FD0;&#x7B97;&#x7B26;" class="headerlink" title="&#x91CD;&#x8F7D;&#x8FD0;&#x7B97;&#x7B26;"></a>&#x91CD;&#x8F7D;&#x8FD0;&#x7B97;&#x7B26;</h2><p>&#x5EFA;&#x7ACB;&#x4E00;&#x4E2A;&#x6BD4;&#x8F83;&#x5B57;&#x7B26;&#x5E76;&#x8F93;&#x51FA;&#x7684;&#x7A0B;&#x5E8F;&#x6846;&#x67B6;<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br></pre></td><td class="code"><pre><span class="line">class String</span><br><span class="line">{</span><br><span class="line">public:</span><br><span class="line">    String( ){p = NULL;} // &#x9ED8;&#x8BA4;&#x6784;&#x9020;&#x51FD;&#x6570;</span><br><span class="line">    String(char *str); // &#x6784;&#x9020;&#x51FD;&#x6570;</span><br><span class="line">    void display();</span><br><span class="line">private:</span><br><span class="line">    char *p;</span><br><span class="line">};</span><br><span class="line"></span><br><span class="line">String::String(char *str)</span><br><span class="line">{</span><br><span class="line">    p = str;</span><br><span class="line">}</span><br><span class="line"></span><br><span class="line">void String::display()</span><br><span class="line">{</span><br><span class="line">    cout &lt;&lt; p;</span><br><span class="line">}</span><br><span class="line"></span><br><span class="line">int main( )</span><br><span class="line">{</span><br><span class="line">    String string1(&quot;Hello&quot;), string2(&quot;World&quot;);</span><br><span class="line">    string1.display();</span><br><span class="line">    cout &lt;&lt; endl;</span><br><span class="line">    string2.display();</span><br><span class="line">    return 0;</span><br><span class="line">}</span><br></pre></td></tr></table></figure></p>
+<h3 id="&#x91CD;&#x8F7D;&#x53CC;&#x76EE;&#x8FD0;&#x7B97;&#x7B26;"><a href="#&#x91CD;&#x8F7D;&#x53CC;&#x76EE;&#x8FD0;&#x7B97;&#x7B26;" class="headerlink" title="&#x91CD;&#x8F7D;&#x53CC;&#x76EE;&#x8FD0;&#x7B97;&#x7B26;"></a>&#x91CD;&#x8F7D;&#x53CC;&#x76EE;&#x8FD0;&#x7B97;&#x7B26;</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br></pre></td><td class="code"><pre><span class="line">class String</span><br><span class="line">{</span><br><span class="line">public:</span><br><span class="line">    String( ){p = NULL;} // &#x9ED8;&#x8BA4;&#x6784;&#x9020;&#x51FD;&#x6570;</span><br><span class="line">    String(char *str); // &#x6784;&#x9020;&#x51FD;&#x6570;</span><br><span class="line">    friend bool operator &gt; (String &amp;string1, String &amp;string2); // &#x58F0;&#x660E;&#x8FD0;&#x7B97;&#x7B26;&#x51FD;&#x6570;&#x4E3A;&#x53CB;&#x5143;</span><br><span class="line">    friend bool operator &lt; (String &amp;string1, String &amp;string2);</span><br><span class="line">    friend bool operator == (String &amp;string1, String &amp;string2);</span><br><span class="line">    void display();</span><br><span class="line">private:</span><br><span class="line">    char *p;</span><br><span class="line">};</span><br><span class="line"></span><br><span class="line">String::String(char *str)</span><br><span class="line">{</span><br><span class="line">    p = str;</span><br><span class="line">}</span><br><span class="line"></span><br><span class="line">void String::display()</span><br><span class="line">{</span><br><span class="line">    cout &lt;&lt; p;</span><br><span class="line">}</span><br><span class="line"></span><br><span class="line">bool operator &gt; (String &amp;string1, String &amp;string2)</span><br><span class="line">{</span><br><span class="line">    if(strcmp(string1.p, string2.p) &gt; 0)</span><br><span class="line">        return true;</span><br><span class="line">    else</span><br><span class="line">        return false;</span><br><span class="line">}</span><br><span class="line"></span><br><span class="line">bool operator &lt; (String &amp;string1, String &amp;string2)</span><br><span class="line">{</span><br><span class="line">    if(strcmp(string1.p, string2.p) &lt; 0)</span><br><span class="line">        return true;</span><br><span class="line">    else</span><br><span class="line">        return false;</span><br><span class="line">}</span><br><span class="line"></span><br><span class="line">bool operator == (String &amp;string1, String &amp;string2)</span><br><span class="line">{</span><br><span class="line">    if(strcmp(string1.p, string2.p) == 0)</span><br><span class="line">        return true;</span><br><span class="line">    else</span><br><span class="line">        return false;</span><br><span class="line">}</span><br><span class="line"></span><br><span class="line">int main( )</span><br><span class="line">{</span><br><span class="line">    String string1(&quot;Hello&quot;), string2(&quot;Book&quot;);</span><br><span class="line">    cout &lt;&lt; (string1 &gt; string2) &lt;&lt; endl;</span><br><span class="line">    cout &lt;&lt; (string1 &lt; string2) &lt;&lt; endl;</span><br><span class="line">    cout &lt;&lt; (string1 == string2) &lt;&lt; endl;</span><br><span class="line">    return 0;</span><br><span class="line">}</span><br></pre></td></tr></table></figure>
+<p>&#x4ECE;&#x201D;&gt;&#x201D;&#x7684;&#x91CD;&#x8F7D;&#xFF0C;&#x6A21;&#x4EFF;&#x7740;&#x5199;&#x51FA;&#x201D;&lt;&#x201D;&#x548C;&#x201C;==&#x201D;</p>
+<p>&#x4E3A;&#x4E86;&#x66F4;&#x76F4;&#x89C2;&#xFF0C;&#x66F4;&#x7B26;&#x5408;C++&#x4EE3;&#x7801;&#x98CE;&#x683C;&#xFF0C;&#x6DFB;&#x52A0;compare&#x51FD;&#x6570;&#x540C;&#x65F6;&#x4FEE;&#x6539;main<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br></pre></td><td class="code"><pre><span class="line">void compare(String &amp;string1, String &amp;string2)</span><br><span class="line">{</span><br><span class="line">    if(operator &gt; (string1, string2) == 1)</span><br><span class="line">    {string1.display();cout&lt;&lt;&quot;&gt;&quot;;string2.display();}</span><br><span class="line">    else</span><br><span class="line">        if(operator &lt; (string1, string2) == 1)</span><br><span class="line">    {string1.display();cout&lt;&lt;&quot;&lt;&quot;;string2.display();}</span><br><span class="line">    else</span><br><span class="line">        if(operator == (string1, string2) == 1)</span><br><span class="line">    {string1.display();cout&lt;&lt;&quot;==&quot;;string2.display();}</span><br><span class="line">};</span><br><span class="line"></span><br><span class="line">int main( )</span><br><span class="line">{</span><br><span class="line">    String string1(&quot;Hello&quot;), string2(&quot;World&quot;);</span><br><span class="line">    compare(string1, string2);</span><br><span class="line">    return 0;</span><br><span class="line">}</span><br></pre></td></tr></table></figure></p>
+<h3 id="&#x91CD;&#x8F7D;&#x5355;&#x76EE;&#x8FD0;&#x7B97;&#x7B26;"><a href="#&#x91CD;&#x8F7D;&#x5355;&#x76EE;&#x8FD0;&#x7B97;&#x7B26;" class="headerlink" title="&#x91CD;&#x8F7D;&#x5355;&#x76EE;&#x8FD0;&#x7B97;&#x7B26;"></a>&#x91CD;&#x8F7D;&#x5355;&#x76EE;&#x8FD0;&#x7B97;&#x7B26;</h3><p>&#x6A21;&#x62DF;&#x79D2;&#x8868;&#xFF0C;&#x6BCF;60&#x79D2;&#x8FDB;&#x4E00;&#x5206;&#x949F;&#xFF0C;&#x79D2;&#x53C8;&#x4ECE;0&#x5F00;&#x59CB;&#xFF0C;&#x8F93;&#x51FA;&#x5206;&#x548C;&#x79D2;<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br></pre></td><td class="code"><pre><span class="line">class Time</span><br><span class="line">{</span><br><span class="line">public:</span><br><span class="line">    Time( ){minute = 0; sec = 0;}</span><br><span class="line">    Time(int m, int s):minute(m), sec(s){}</span><br><span class="line">    Time operator ++( );</span><br><span class="line">    Time operator ++(int); // &#x540E;&#x7F6E;&#x81EA;&#x589E;++&#x91CD;&#x8F7D;&#xFF0C;&#x589E;&#x52A0;&#x7684;&#x53C2;&#x6570;int&#x53EA;&#x662F;&#x4E3A;&#x4E86;&#x548C;&#x524D;&#x7F6E;&#x81EA;&#x589E;&#x533A;&#x5206;&#xFF0C;**&#x6CA1;&#x6709;&#x4EFB;&#x4F55;&#x4F5C;&#x7528;**</span><br><span class="line">    void display( ){cout &lt;&lt; minute &lt;&lt; &quot;:&quot; &lt;&lt; sec &lt;&lt;endl;}</span><br><span class="line">private:</span><br><span class="line">    int minute;</span><br><span class="line">    int sec;</span><br><span class="line">};</span><br><span class="line"></span><br><span class="line">Time Time::operator++()</span><br><span class="line">{</span><br><span class="line">    if(++sec &gt;= 60){</span><br><span class="line">        sec -= 60;</span><br><span class="line">        ++minute;</span><br><span class="line">    }</span><br><span class="line">    return *this; // &#x8FD4;&#x56DE;&#x5F53;&#x524D;&#x5BF9;&#x8C61;&#x503C;</span><br><span class="line">};</span><br><span class="line"></span><br><span class="line">Time Time::operator++(int)</span><br><span class="line">{</span><br><span class="line">    Time temp(* this); // temp&#x6765;&#x5B58;&#x50A8;&#x5F53;&#x524D;&#x7684;&#x5BF9;&#x8C61;</span><br><span class="line">    sec++;</span><br><span class="line">    if(sec&gt;=60){</span><br><span class="line">        sec -= 60;</span><br><span class="line">        ++minute;</span><br><span class="line">    }</span><br><span class="line">    return temp; // **&#x8FD4;&#x56DE;&#x81EA;&#x52A0;&#x4E4B;&#x524D;&#x7684;&#x5BF9;&#x8C61;&#xFF0C;&#x7136;&#x540E;&#x5BF9;&#x8C61;&#x81EA;&#x52A0;**</span><br><span class="line">}</span><br><span class="line"></span><br><span class="line">int main( )</span><br><span class="line">{</span><br><span class="line">    Time time1(34, 59), time2;</span><br><span class="line">    cout &lt;&lt; &quot;time1:&quot;;</span><br><span class="line">    time1.display();</span><br><span class="line"></span><br><span class="line">    ++time1;</span><br><span class="line">    cout &lt;&lt; &quot;++time1:&quot;;</span><br><span class="line">    time1.display();</span><br><span class="line"></span><br><span class="line">    time2 = time1++;</span><br><span class="line">    cout &lt;&lt; &quot;time1++:&quot;;</span><br><span class="line">    time1.display();</span><br><span class="line">    cout &lt;&lt; &quot;time2:&quot;;</span><br><span class="line">    time2.display();</span><br><span class="line">    return 0;</span><br><span class="line">}</span><br></pre></td></tr></table></figure></p>
+<h3 id="&#x91CD;&#x8F7D;&#x6D41;&#x63D2;&#x5165;&#x8FD0;&#x7B97;&#x7B26;&#x548C;&#x6D41;&#x63D0;&#x53D6;&#x8FD0;&#x7B97;&#x7B26;"><a href="#&#x91CD;&#x8F7D;&#x6D41;&#x63D2;&#x5165;&#x8FD0;&#x7B97;&#x7B26;&#x548C;&#x6D41;&#x63D0;&#x53D6;&#x8FD0;&#x7B97;&#x7B26;" class="headerlink" title="&#x91CD;&#x8F7D;&#x6D41;&#x63D2;&#x5165;&#x8FD0;&#x7B97;&#x7B26;&#x548C;&#x6D41;&#x63D0;&#x53D6;&#x8FD0;&#x7B97;&#x7B26;"></a>&#x91CD;&#x8F7D;&#x6D41;&#x63D2;&#x5165;&#x8FD0;&#x7B97;&#x7B26;&#x548C;&#x6D41;&#x63D0;&#x53D6;&#x8FD0;&#x7B97;&#x7B26;</h3><p>&#x5BF9;&#x201D;&lt;&lt;&#x201D;&#x548C;&#x201D;&gt;&gt;&#x201D;&#x91CD;&#x8F7D;&#x7684;&#x51FD;&#x6570;&#x5F62;&#x5F0F;&#x5982;&#x4E0B;<br>istream &amp; operator &gt;&gt; (istream &amp;, &#x81EA;&#x5B9A;&#x4E49;&#x7C7B; &amp;)&#xFF1B;<br>ostream &amp; operator &gt;&gt; (ostream &amp;, &#x81EA;&#x5B9A;&#x4E49;&#x7C7B; &amp;)&#xFF1B;<br>&#x7B2C;&#x4E00;&#x4E2A;&#x53C2;&#x6570;&#x548C;&#x51FD;&#x6570;&#x5FC5;&#x987B;&#x662F;istream&amp;&#x6216;ostream&amp;&#x7C7B;&#x578B;&#xFF0C;&#x7B2C;&#x4E8C;&#x4E2A;&#x662F;&#x8981;&#x8F93;&#x51FA;&#x7684;&#x7C7B;&#x3002;&#x6240;&#x4EE5;&#x91CD;&#x8F7D;&#x7684;&#x51FD;&#x6570;&#x53EA;&#x80FD;&#x4F5C;&#x4E3A;&#x53CB;&#x5143;&#x6216;&#x8005;&#x666E;&#x901A;&#x51FD;&#x6570;&#xFF0C;&#x4E0D;&#x53EF;&#x4EE5;&#x4F5C;&#x4E3A;&#x6210;&#x5458;&#x51FD;&#x6570;&#x3002;</p>
+<p>&#x7528;&#x201D;&lt;&lt;&#x201D;&#x8F93;&#x51FA;&#x7528;&#x6237;&#x58F0;&#x660E;&#x7C7B;&#x7684;&#x5BF9;&#x8C61;&#x7684;&#x4FE1;&#x606F;&#xFF0C;&#x4EE5;&#x4E0A;&#x9762;<strong>&#x53CB;&#x5143;&#x91CD;&#x8F7D;</strong>&#x7684;&#x590D;&#x6570;&#x64CD;&#x4F5C;&#x4F5C;&#x4E3A;&#x4F8B;&#x5B50;<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br></pre></td><td class="code"><pre><span class="line">class Complex</span><br><span class="line">{</span><br><span class="line">public:</span><br><span class="line">    Complex( ){real = 0; imag = 0;}</span><br><span class="line">    Complex(double r, double i){real = r; imag = i;}</span><br><span class="line">    Complex operator + (Complex &amp;c2);</span><br><span class="line">    friend ostream&amp; operator &lt;&lt; (ostream&amp;, Complex&amp;);</span><br><span class="line">private:</span><br><span class="line">    double real;</span><br><span class="line">    double imag;</span><br><span class="line">};</span><br><span class="line"></span><br><span class="line">Complex Complex::operator + (Complex &amp;c2)</span><br><span class="line">{</span><br><span class="line">    return Complex(real+c2.real, imag+c2.imag);</span><br><span class="line">}</span><br><span class="line"></span><br><span class="line">ostream&amp; operator&lt;&lt; (ostream&amp; output, Complex&amp; c)</span><br><span class="line">{</span><br><span class="line">    output &lt;&lt; &quot;(&quot; &lt;&lt; c.real &lt;&lt; &quot;+&quot; &lt;&lt; c.imag &lt;&lt; &quot;i)&quot; &lt;&lt;endl;</span><br><span class="line">    return output;</span><br><span class="line">}</span><br><span class="line"></span><br><span class="line">int main( )</span><br><span class="line">{</span><br><span class="line">    Complex c1(3,4), c2(5, -10), c3;</span><br><span class="line">    c3 = c1 + c2;</span><br><span class="line">    cout &lt;&lt; c3;</span><br><span class="line">    return 0;</span><br><span class="line">}</span><br></pre></td></tr></table></figure></p>
+<p>&#x8BE6;&#x770B;&#x6CE8;&#x91CA;&#xFF0C;return output&#x8BED;&#x53E5;&#x5C31;&#x662F;return cout&#xFF0C;&#x6267;&#x884C;&#x6D41;&#x7A0B;&#x4E3A;&#xFF1A;<br><code>cout &lt;&lt; c3;</code><br>cout &lt;&lt; c3&#x7684;&#x8FD4;&#x56DE;&#x503C;&#x662F;cout&#x7684;&#x5F53;&#x524D;&#x503C;&#xFF0C;&#x4E4B;&#x540E;<br><code>(cout &lt;&lt; c3) &lt;&lt; c2; // &#x8BE5;&#x5F0F;&#x5B50;&#x5DE6;&#x4FA7;&#x4E5F;&#x662F;ostram&#x7C7B;&#x5BF9;&#x8C61;&#xFF0C;&#x53F3;&#x4FA7;&#x662F;Complex&#x7C7B;&#x5BF9;&#x8C61;</code><br>&#x6240;&#x4EE5;&#x89E3;&#x91CA;&#x4E86;&#x4E3A;&#x4EC0;&#x4E48;C++&#x89C4;&#x5B9A;&#x201D;&lt;&lt;&#x201D;&#x7684;&#x7B2C;&#x4E00;&#x4E2A;&#x53C2;&#x6570;&#x548C;&#x51FD;&#x6570;&#x7684;&#x7C7B;&#x578B;&#x5FC5;&#x987B;&#x662F;ostream&#xFF0C;&#x5728;&#x8FD4;&#x56DE;cout&#x5BF9;&#x8C61;&#x4E4B;&#x540E;&#x53EF;&#x4EE5;&#x8FDE;&#x7EED;&#x8F93;&#x51FA;&#x3002;<br>eg. <strong>cout &lt;&lt; c3</strong> &lt;&lt; 5 &lt;&lt;endl; &#x524D;&#x9762;&#x90E8;&#x5206;&#x624D;&#x662F;&#x91CD;&#x8F7D;&#x7684;&#x6D41;&#x63D2;&#x5165;&#x7B26;&#xFF0C;&#x56E0;&#x4E3A;&#x53F3;&#x4FA7;<strong>&#x4E0D;&#x662F;Complex&#x7C7B;&#x7684;&#x5BF9;&#x8C61;</strong>&#x3002;</p>
+<p>&#x5BF9; &#x201C;&gt;&gt;&#x201D; &#x91CD;&#x8F7D;<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br></pre></td><td class="code"><pre><span class="line">class Complex</span><br><span class="line">{</span><br><span class="line">public:</span><br><span class="line">    Complex( ){real = 0; imag = 0;}</span><br><span class="line">    Complex(double r, double i){real = r; imag = i;}</span><br><span class="line">    Complex operator + (Complex &amp;c2);</span><br><span class="line">    friend ostream&amp; operator &lt;&lt; (ostream&amp;, Complex&amp;);</span><br><span class="line">    friend istream&amp; operator &gt;&gt; (istream&amp;, Complex&amp;);</span><br><span class="line">private:</span><br><span class="line">    double real;</span><br><span class="line">    double imag;</span><br><span class="line">};</span><br><span class="line"></span><br><span class="line">Complex Complex::operator + (Complex &amp;c2)</span><br><span class="line">{</span><br><span class="line">    return Complex(real+c2.real, imag+c2.imag);</span><br><span class="line">}</span><br><span class="line"></span><br><span class="line">ostream&amp; operator &lt;&lt; (ostream&amp; output, Complex&amp; c)</span><br><span class="line">{</span><br><span class="line">    output &lt;&lt; &quot;(&quot; &lt;&lt; c.real &lt;&lt; &quot;+&quot; &lt;&lt; c.imag &lt;&lt; &quot;i)&quot; &lt;&lt;endl;</span><br><span class="line">    return output; // &#x53EF;&#x4EE5;&#x8FDE;&#x7EED;&#x5411;&#x8F93;&#x51FA;&#x6D41;&#x63D2;&#x5165;&#x4FE1;&#x606F;&#xFF0C;output&#x662F;ostream&#x7684;&#x5BF9;&#x8C61;\</span><br><span class="line">                          &#x662F;&#x5B9E;&#x53C2;cout&#x7684;&#x5F15;&#x7528;&#xFF0C;&#x4E8C;&#x8005;&#x5171;&#x4EAB;&#x4E00;&#x6BB5;&#x5185;&#x5B58;&#x7A7A;&#x95F4;</span><br><span class="line">}</span><br><span class="line"></span><br><span class="line">istream&amp; operator &gt;&gt; (istream&amp; input, Complex&amp; c)</span><br><span class="line">{</span><br><span class="line">    input &gt;&gt; c.real &gt;&gt; c.imag;</span><br><span class="line">    return input;</span><br><span class="line">}</span><br><span class="line"></span><br><span class="line">int main( )</span><br><span class="line">{</span><br><span class="line">    Complex c1, c2;</span><br><span class="line">    cin &gt;&gt; c1 &gt;&gt; c2;</span><br><span class="line">    cout &lt;&lt; &#x201C;c1=&#x201C; &lt;&lt; c1 &lt;&lt; endl; // &#x7B49;&#x4EF7;&#x4E8E;operator &lt;&lt; (cout, c3),&#x518D;&#x8C03;&#x7528;operator &lt;&lt;&#x51FD;&#x6570;</span><br><span class="line">    cout &lt;&lt; &#x201C;c2=&#x201C; &lt;&lt; c2 &lt;&lt; endl;</span><br><span class="line">    return 0;</span><br><span class="line">}</span><br></pre></td></tr></table></figure></p>
+
+      
+    </div>
+
+    
+
+    
+    
+    
+
+    
+
+    
+      
+    
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+      
+      
+
+      
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
+            
+              <a href="/passages/C++程序设计Day-0x08/" rel="next" title="C++程序设计Day-0x08">
+                <i class="fa fa-chevron-left"></i> C++程序设计Day-0x08
+              </a>
+            
+          </div>
+
+          <span class="post-nav-divider"></span>
+
+          <div class="post-nav-prev post-nav-item">
+            
+          </div>
+        </div>
+      
+
+      
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+  </div>
+
+
+          </div>
+          
+
+  
+
+
+
+        </div>
+        
+          
+  
+  <div class="sidebar-toggle">
+    <div class="sidebar-toggle-line-wrap">
+      <span class="sidebar-toggle-line sidebar-toggle-line-first"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-middle"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-last"></span>
+    </div>
+  </div>
+
+  <aside id="sidebar" class="sidebar">
+    <div class="sidebar-inner">
+
+      
+
+      
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap">
+            Table of Contents
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview-wrap">
+            Overview
+          </li>
+        </ul>
+      
+
+      <div class="site-overview-wrap sidebar-panel">
+        <div class="site-overview">
+          <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+            
+              <p class="site-author-name" itemprop="name">Ma Sicheng</p>
+              <div class="site-description motion-element" itemprop="description"></div>
+          </div>
+
+          
+            <nav class="site-state motion-element">
+              
+                <div class="site-state-item site-state-posts">
+                
+                  <a href="/archives/">
+                
+                    <span class="site-state-item-count">15</span>
+                    <span class="site-state-item-name">posts</span>
+                  </a>
+                </div>
+              
+
+              
+
+              
+            </nav>
+          
+
+          
+
+          
+
+          
+
+          
+
+          
+          
+
+          
+            
+          
+          
+
+        </div>
+      </div>
+
+      
+      <!--noindex-->
+        <div class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+            
+            
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#C-程序设计Day-0x09"><span class="nav-number">1.</span> <span class="nav-text">C++程序设计Day-0x09</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#运算符重载"><span class="nav-number">2.</span> <span class="nav-text">运算符重载</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#友元重载"><span class="nav-number">2.1.</span> <span class="nav-text">友元重载</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#重载运算符"><span class="nav-number">2.2.</span> <span class="nav-text">重载运算符</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#重载双目运算符"><span class="nav-number">2.2.1.</span> <span class="nav-text">重载双目运算符</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#重载单目运算符"><span class="nav-number">2.2.2.</span> <span class="nav-text">重载单目运算符</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#重载流插入运算符和流提取运算符"><span class="nav-number">2.2.3.</span> <span class="nav-text">重载流插入运算符和流提取运算符</span></a></li></ol></li></ol></li></ol></div>
+            
+
+          </div>
+        </div>
+      <!--/noindex-->
+      
+
+      
+
+    </div>
+  </aside>
+  
+
+
+        
+      </div>
+    </main>
+
+    <footer id="footer" class="footer">
+      <div class="footer-inner">
+        <div class="copyright">&copy; <span itemprop="copyrightYear">2020</span>
+  <span class="with-love" id="animate">
+    <i class="fa fa-user"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">Ma Sicheng</span>
+
+  
+
+  
+</div>
+
+
+  <div class="powered-by">Powered by <a href="https://hexo.io" class="theme-link" rel="noopener" target="_blank">Hexo</a> v3.9.0</div>
+
+
+
+  <span class="post-meta-divider">|</span>
+
+
+
+  <div class="theme-info">Theme – <a href="https://theme-next.org" class="theme-link" rel="noopener" target="_blank">NexT.Muse</a> v7.0.1</div>
+
+
+
+
+        
+
+
+
+
+
+
+
+
+        
+      </div>
+    </footer>
+
+    
+      <div class="back-to-top">
+        <i class="fa fa-arrow-up"></i>
+        
+      </div>
+    
+
+    
+
+    
+
+    
+  </div>
+
+  
+
+<script>
+  if (Object.prototype.toString.call(window.Promise) !== '[object Function]') {
+    window.Promise = null;
+  }
+</script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  <script src="/lib/jquery/index.js?v=2.1.3"></script>
+
+  
+  <script src="/lib/velocity/velocity.min.js?v=1.2.1"></script>
+
+  
+  <script src="/lib/velocity/velocity.ui.min.js?v=1.2.1"></script>
+
+
+  
+
+
+  <script src="/js/src/utils.js?v=7.0.1"></script>
+
+  <script src="/js/src/motion.js?v=7.0.1"></script>
+
+
+
+  
+  
+
+
+  <script src="/js/src/schemes/muse.js?v=7.0.1"></script>
+
+
+
+  
+  <script src="/js/src/scrollspy.js?v=7.0.1"></script>
+<script src="/js/src/post-details.js?v=7.0.1"></script>
+
+
+
+  
+
+
+  <script src="/js/src/next-boot.js?v=7.0.1"></script>
+
+
+  
+
+  
+
+  
+
+  
+
+
+  
+
+
+  
+
+
+
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+</body>
+</html>
