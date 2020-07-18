@@ -1,0 +1,751 @@
+<!DOCTYPE html>
+
+
+
+
+
+
+
+
+
+
+
+
+  
+
+
+<html class="theme-next muse use-motion" lang>
+<head><meta name="generator" content="Hexo 3.9.0">
+  <meta charset="UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=2">
+<meta name="theme-color" content="#222">
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<link rel="stylesheet" href="/lib/font-awesome/css/font-awesome.min.css?v=4.6.2">
+
+<link rel="stylesheet" href="/css/main.css?v=7.0.1">
+
+
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon-next.png?v=7.0.1">
+
+
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32-next.png?v=7.0.1">
+
+
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16-next.png?v=7.0.1">
+
+
+  <link rel="mask-icon" href="/images/logo.svg?v=7.0.1" color="#222">
+
+
+
+
+
+
+
+<script id="hexo.configurations">
+  var NexT = window.NexT || {};
+  var CONFIG = {
+    root: '/',
+    scheme: 'Muse',
+    version: '7.0.1',
+    sidebar: {"position":"left","display":"post","offset":12,"onmobile":false,"dimmer":false},
+    back2top: true,
+    back2top_sidebar: false,
+    fancybox: false,
+    fastclick: false,
+    lazyload: false,
+    tabs: true,
+    motion: {"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},
+    algolia: {
+      applicationID: '',
+      apiKey: '',
+      indexName: '',
+      hits: {"per_page":10},
+      labels: {"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}
+    }
+  };
+</script>
+
+
+  
+
+
+
+
+  <meta name="description" content="C++&amp;#x7A0B;&amp;#x5E8F;&amp;#x8BBE;&amp;#x8BA1;Day-0x10">
+<meta property="og:type" content="article">
+<meta property="og:title" content="C++程序设计Day-0x10">
+<meta property="og:url" content="http://yoursite.com/passages/C++程序设计Day-0x010/index.html">
+<meta property="og:site_name" content="Just Mess">
+<meta property="og:description" content="C++&amp;#x7A0B;&amp;#x5E8F;&amp;#x8BBE;&amp;#x8BA1;Day-0x10">
+<meta property="og:locale" content="default">
+<meta property="og:updated_time" content="2020-07-18T08:54:05.449Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="C++程序设计Day-0x10">
+<meta name="twitter:description" content="C++&amp;#x7A0B;&amp;#x5E8F;&amp;#x8BBE;&amp;#x8BA1;Day-0x10">
+
+
+
+
+
+
+  <link rel="canonical" href="http://yoursite.com/passages/C++程序设计Day-0x010/">
+
+
+
+<script id="page.configurations">
+  CONFIG.page = {
+    sidebar: "",
+  };
+</script>
+
+  <title>C++程序设计Day-0x10 | Just Mess</title>
+  
+
+
+
+
+
+
+
+
+
+
+
+
+  <noscript>
+  <style>
+  .use-motion .motion-element,
+  .use-motion .brand,
+  .use-motion .menu-item,
+  .sidebar-inner,
+  .use-motion .post-block,
+  .use-motion .pagination,
+  .use-motion .comments,
+  .use-motion .post-header,
+  .use-motion .post-body,
+  .use-motion .collection-title { opacity: initial; }
+
+  .use-motion .logo,
+  .use-motion .site-title,
+  .use-motion .site-subtitle {
+    opacity: initial;
+    top: initial;
+  }
+
+  .use-motion .logo-line-before i { left: initial; }
+  .use-motion .logo-line-after i { right: initial; }
+  </style>
+</noscript>
+
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage" lang="default">
+
+  
+  
+    
+  
+
+  <div class="container sidebar-position-left page-post-detail">
+    <div class="headband"></div>
+
+    <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-brand-wrapper">
+  <div class="site-meta">
+    
+
+    <div class="custom-logo-site-title">
+      <a href="/" class="brand" rel="start">
+        <span class="logo-line-before"><i></i></span>
+        <span class="site-title">Just Mess</span>
+        <span class="logo-line-after"><i></i></span>
+      </a>
+    </div>
+    
+      
+        <p class="site-subtitle">记录日常和乱七八糟哟</p>
+      
+    
+    
+  </div>
+
+  <div class="site-nav-toggle">
+    <button aria-label="Toggle navigation bar">
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+    </button>
+  </div>
+</div>
+
+
+
+<nav class="site-nav">
+  
+    <ul id="menu" class="menu">
+      
+        
+        
+        
+          
+          <li class="menu-item menu-item-home">
+
+    
+    
+    
+      
+    
+
+    
+
+    <a href="/" rel="section"><i class="menu-item-icon fa fa-fw fa-home"></i> <br>Home</a>
+
+  </li>
+        
+        
+        
+          
+          <li class="menu-item menu-item-archives">
+
+    
+    
+    
+      
+    
+
+    
+
+    <a href="/archives/" rel="section"><i class="menu-item-icon fa fa-fw fa-archive"></i> <br>Archives</a>
+
+  </li>
+
+      
+      
+    </ul>
+  
+
+  
+    
+
+  
+
+  
+</nav>
+
+
+
+  
+
+
+
+</div>
+    </header>
+
+    
+
+
+    <main id="main" class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          
+          <div id="content" class="content">
+            
+
+  <div id="posts" class="posts-expand">
+    
+
+  
+
+  
+  
+  
+
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/passages/C++程序设计Day-0x010/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="Ma Sicheng">
+      <meta itemprop="description" content>
+      <meta itemprop="image" content="/images/avatar.gif">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Just Mess">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">C++程序设计Day-0x10
+
+              
+            
+          </h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+
+            
+            
+            
+
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">Posted on</span>
+              
+
+              
+                
+              
+
+              <time title="Created: 2020-07-17 16:28:08" itemprop="dateCreated datePublished" datetime="2020-07-17T16:28:08+08:00">2020-07-17</time>
+            
+
+            
+              
+
+              
+                
+                <span class="post-meta-divider">|</span>
+                
+
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-calendar-check-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">Edited on</span>
+                
+                <time title="Modified: 2020-07-18 16:54:05" itemprop="dateModified" datetime="2020-07-18T16:54:05+08:00">2020-07-18</time>
+              
+            
+          </span>
+
+          
+
+          
+            
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        <h1 id="C-&#x7A0B;&#x5E8F;&#x8BBE;&#x8BA1;Day-0x10"><a href="#C-&#x7A0B;&#x5E8F;&#x8BBE;&#x8BA1;Day-0x10" class="headerlink" title="C++&#x7A0B;&#x5E8F;&#x8BBE;&#x8BA1;Day-0x10"></a>C++&#x7A0B;&#x5E8F;&#x8BBE;&#x8BA1;Day-0x10</h1><a id="more"></a>
+<hr>
+<h1 id="&#x7EE7;&#x627F;&#x548C;&#x6D3E;&#x751F;"><a href="#&#x7EE7;&#x627F;&#x548C;&#x6D3E;&#x751F;" class="headerlink" title="&#x7EE7;&#x627F;&#x548C;&#x6D3E;&#x751F;"></a>&#x7EE7;&#x627F;&#x548C;&#x6D3E;&#x751F;</h1><p><strong>&#x7EE7;&#x627F;&#x6027;</strong>&#x662F;&#x9762;&#x5411;&#x5BF9;&#x8C61;&#x7A0B;&#x5E8F;&#x8BBE;&#x8BA1;&#x6700;&#x91CD;&#x8981;&#x7684;&#x7279;&#x5F81;&#xFF0C;&#x5728;C++&#x4E2D;&#xFF0C;<strong>&#x7EE7;&#x627F;</strong>&#x5C31;&#x662F;&#x5728;&#x4E00;&#x4E2A;&#x5DF2;&#x5B58;&#x5728;&#x7684;&#x7C7B;&#x7684;&#x57FA;&#x7840;&#x4E0A;&#x5EFA;&#x7ACB;&#x4E00;&#x4E2A;&#x65B0;&#x7C7B;&#x3002;&#x5DF2;&#x5B58;&#x5728;&#x7684;&#x7C7B;&#xFF08;&#x4F8B;&#x5982;&#x4EBA;&#xFF09;&#x79F0;&#x4E3A;<strong>&#x57FA;&#x7C7B;</strong>&#x6216;&#x7236;&#x7C7B;&#xFF0C;&#x65B0;&#x5EFA;&#x7ACB;&#x7684;&#x7C7B;&#xFF08;&#x201C;&#x4F8B;&#x5982;&#x7537;&#x4EBA;&#x201D;&#xFF09;&#xFF0C;&#x79F0;&#x4E3A;<strong>&#x6D3E;&#x751F;&#x7C7B;</strong>&#x6216;&#x5B50;&#x7C7B;&#x3002;<br><em>&#x6CE8;&#x610F;</em>&#xFF1A;&#x4E66;&#x4E2D;&#x89C4;&#x5B9A;&#xFF0C;&#x7BAD;&#x5934;&#x6307;&#x5411;&#x7EE7;&#x627F;&#x7684;&#x65B9;&#x5411;&#xFF0C;&#x4ECE;&#x6D3E;&#x751F;&#x7C7B;&#x6307;&#x5411;&#x57FA;&#x7C7B;<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">class &#x6D3E;&#x751F;&#x7C7B;&#x540D;&#xFF1A;&#x3010;&#x7EE7;&#x627F;&#x65B9;&#x5F0F;&#x3011;&#x57FA;&#x7C7B;&#x540D;</span><br><span class="line">{</span><br><span class="line">    &#x6D3E;&#x751F;&#x7C7B;&#x65B0;&#x52A0;&#x7684;&#x5BF9;&#x8C61;</span><br><span class="line">}&#xFF1B;</span><br></pre></td></tr></table></figure></p>
+<p>&#x4E0D;&#x5199;&#x7EE7;&#x627F;&#x65B9;&#x5F0F;&#x9ED8;&#x8BA4;private</p>
+<p>&#x6D3E;&#x751F;&#x7C7B;&#x5E76;&#x4E0D;&#x662F;&#x7B80;&#x5355;&#x5730;&#x628A;&#x57FA;&#x7C7B;&#x7684;&#x6210;&#x5458;&#x548C;&#x6D3E;&#x751F;&#x7C7B;&#x589E;&#x52A0;&#x7684;&#x6210;&#x5458;&#x52A0;&#x5728;&#x4E00;&#x8D77;&#xFF0C;&#x5305;&#x62EC;&#x4EE5;&#x4E0B;&#x4E09;&#x6B65;</p>
+<ol>
+<li>&#x4ECE;&#x57FA;&#x7C7B;&#x63A5;&#x6536;&#x6210;&#x5458;&#x3002;&#x6D3E;&#x751F;&#x7C7B;&#x628A;&#x57FA;&#x7C7B;&#x5168;&#x90E8;&#x7684;&#x6210;&#x5458;&#x6CA1;&#x6709;&#x7ECF;&#x8FC7;&#x9009;&#x62E9;&#x7684;&#x63A5;&#x53D7;&#x8FC7;&#x6765;<br>&#x6240;&#x4EE5;&#xFF0C;&#x7EE7;&#x627F;&#x8FC7;&#x6765;&#x7684;&#x4E00;&#x90E8;&#x5206;&#x6210;&#x5458;&#x662F;&#x6D3E;&#x751F;&#x7C7B;&#x4E2D;&#x4E0D;&#x4F1A;&#x7528;&#x5230;&#x7684;&#xFF0C;&#x9020;&#x6210;&#x6570;&#x636E;&#x7684;&#x5197;&#x4F59;&#x8FD9;&#x662F;&#x4E0D;&#x53EF;&#x907F;&#x514D;&#x7684;&#xFF0C;&#x6240;&#x4EE5;&#x5728;&#x57FA;&#x7C7B;&#x7684;&#x9009;&#x62E9;&#x4E0A;&#x8981;&#x8C28;&#x614E;</li>
+<li>&#x8C03;&#x6574;&#x4ECE;&#x57FA;&#x7C7B;&#x63A5;&#x6536;&#x7684;&#x6210;&#x5458;&#x3002;&#x63A5;&#x6536;&#x7684;&#x57FA;&#x7C7B;&#x6210;&#x5458;&#x662F;&#x4E0D;&#x80FD;&#x9009;&#x62E9;&#x7684;&#xFF0C;&#x4F46;&#x662F;&#x6539;&#x53D8;&#x57FA;&#x7C7B;&#x6210;&#x5458;&#x5728;&#x6D3E;&#x751F;&#x7C7B;&#x4E2D;&#x7684;&#x8BBF;&#x95EE;&#x5C5E;&#x6027;&#xFF0C;&#x901A;&#x8FC7;&#x5236;&#x5B9A;&#x7EE7;&#x627F;&#x65B9;&#x5F0F;&#x6765;&#x5B9E;&#x73B0;&#x3002;&#x5982;&#x53EF;&#x4EE5;&#x901A;&#x8FC7;&#x7EE7;&#x627F;&#x628A;&#x57FA;&#x7C7B;&#x7684;&#x516C;&#x7528;&#x6210;&#x5458;&#x6307;&#x5B9A;&#x4E3A;&#x6D3E;&#x751F;&#x7C7B;&#x4E2D;&#x7684;&#x8BBF;&#x95EE;&#x5C5E;&#x6027;&#x4E3A;&#x79C1;&#x6709;&#xFF08;&#x6D3E;&#x751F;&#x7C7B;&#x5916;&#x4E0D;&#x80FD;&#x8BBF;&#x95EE;&#xFF09;&#x3002;<br>&#x5728;&#x6D3E;&#x751F;&#x7C7B;&#x4E2D;&#x58F0;&#x660E;&#x4E0E;&#x57FA;&#x7C7B;&#x6210;&#x5458;&#x540C;&#x540D;&#x7684;&#x6210;&#x5458;&#xFF0C;&#x800C;&#x4E14;&#x51FD;&#x6570;&#x7684;&#x53C2;&#x6570;&#x8868;&#x4E5F;&#x76F8;&#x540C;&#xFF0C;&#x90A3;&#x4E48;&#x65B0;&#x6210;&#x5458;&#x4F1A;<strong>&#x8986;&#x76D6;</strong>&#x57FA;&#x7C7B;&#x7684;&#x540C;&#x540D;&#x6210;&#x5458;&#x3002;&#x5982;&#x679C;&#x53C2;&#x6570;&#x8868;&#x4E0D;&#x540C;&#xFF0C;&#x90A3;&#x4E48;&#x5C31;&#x662F;<strong>&#x91CD;&#x8F7D;</strong>&#x3002;</li>
+<li>&#x5728;&#x58F0;&#x660E;&#x6D3E;&#x751F;&#x7C7B;&#x65F6;&#x589E;&#x52A0;&#x7684;&#x6210;&#x5458;&#x3002;&#x4E00;&#x822C;&#x8FD8;&#x5E94;&#x81EA;&#x5DF1;&#x5B9A;&#x4E49;&#x6D3E;&#x751F;&#x7C7B;&#x7684;&#x6784;&#x9020;&#x51FD;&#x6570;&#x548C;&#x6790;&#x6784;&#x51FD;&#x6570;&#xFF0C;&#x56E0;&#x4E3A;&#x4E0D;&#x80FD;&#x4ECE;&#x57FA;&#x7C7B;&#x4E2D;&#x7EE7;&#x627F;&#x3002;<br><strong>&#x6D3E;&#x751F;&#x7C7B;&#x662F;&#x62BD;&#x8C61;&#x57FA;&#x7C7B;&#x7684;&#x5177;&#x4F53;&#x5B9E;&#x73B0;</strong></li>
+</ol>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br></pre></td><td class="code"><pre><span class="line">class Student // &#x58F0;&#x660E;&#x57FA;&#x7C7B;</span><br><span class="line">{</span><br><span class="line">public:</span><br><span class="line">    Student(int n, string nam) // &#x57FA;&#x7C7B;&#x6784;&#x9020;&#x51FD;&#x6570;</span><br><span class="line">    {</span><br><span class="line">        num =n;</span><br><span class="line">        name = nam;</span><br><span class="line">    }</span><br><span class="line">    void display( )</span><br><span class="line">    {</span><br><span class="line">        cout &lt;&lt; num &lt;&lt; name &lt;&lt; endl;</span><br><span class="line">    }</span><br><span class="line">protected:</span><br><span class="line">    int num;</span><br><span class="line">    string name;</span><br><span class="line">};</span><br><span class="line"></span><br><span class="line">class Student1: public Student // &#x58F0;&#x660E;&#x6D3E;&#x751F;&#x7C7B;Student</span><br><span class="line">{</span><br><span class="line">public:</span><br><span class="line">    Student1(int n, string nam, int a, string ad, int n1, string nam1) // &#x6D3E;&#x751F;&#x7C7B;&#x6784;&#x9020;&#x51FD;&#x6570;</span><br><span class="line">    :Student(n, nam), monitor(n1, nam1)</span><br><span class="line">    {</span><br><span class="line">        age = a; // &#x5BF9;&#x6D3E;&#x751F;&#x7C7B;&#x65B0;&#x589E;&#x7684;&#x6570;&#x636E;&#x6210;&#x5458;&#x521D;&#x59CB;&#x5316;</span><br><span class="line">        addr = ad;</span><br><span class="line">    }</span><br><span class="line">    void show( )</span><br><span class="line">    {</span><br><span class="line">        display();</span><br><span class="line">        cout &lt;&lt; &#x201C;age:&#x201D; &lt;&lt; age &lt;&lt;endl;</span><br><span class="line">        cout &lt;&lt; &#x201C;addr:&#x201D; &lt;&lt; addr &lt;&lt;endl;</span><br><span class="line">    }</span><br><span class="line"></span><br><span class="line">    void show_monitor( )</span><br><span class="line">    {</span><br><span class="line">        cout &lt;&lt; endl;</span><br><span class="line">        monitor.display();</span><br><span class="line">    }</span><br><span class="line"></span><br><span class="line">private:</span><br><span class="line">    Student monitor; // &#x6CE8;&#x610F;&#x662F;Student&#x7C7B;&#x578B;</span><br><span class="line">    int age;</span><br><span class="line">    string addr;</span><br><span class="line">};</span><br><span class="line"></span><br><span class="line">int main()</span><br><span class="line">{</span><br><span class="line">    Student1 stud1(10010, &quot;A&quot;, 10011, &quot;B&quot;, 19, &quot;AA&quot;);</span><br><span class="line">    stud1.show();</span><br><span class="line">    stud1.show_monitor();</span><br><span class="line">    return 0;</span><br><span class="line">}</span><br></pre></td></tr></table></figure>
+<p>&#x5B66;&#x751F;&#x6570;&#x636E;&#x5305;&#x542B;&#x73ED;&#x957F;&#xFF0C;&#x73ED;&#x957F;&#x540C;&#x65F6;&#x4E5F;&#x662F;&#x5B66;&#x751F;&#xFF0C;&#x4E5F;&#x5C5E;&#x4E8E;Student&#x7C7B;&#x578B;&#x3002;&#x5728;&#x6D3E;&#x751F;&#x7C7B;&#x7684;&#x6570;&#x636E;&#x6210;&#x5458;&#x4E2D;&#xFF0C;&#x6709;&#x4E00;&#x9879;monitor&#xFF0C;&#x65E2;&#x662F;Student&#x7684;&#x5BF9;&#x8C61;&#xFF0C;&#x4E5F;&#x662F;&#x6D3E;&#x751F;&#x7C7B;Student1&#x7684;&#x5BF9;&#x8C61;</p>
+<h2 id="&#x591A;&#x91CD;&#x7EE7;&#x627F;"><a href="#&#x591A;&#x91CD;&#x7EE7;&#x627F;" class="headerlink" title="&#x591A;&#x91CD;&#x7EE7;&#x627F;"></a>&#x591A;&#x91CD;&#x7EE7;&#x627F;</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">&#x6D3E;&#x751F;&#x7C7B;&#x6784;&#x9020;&#x51FD;&#x6570;&#x540D;&#xFF08;&#x603B;&#x53C2;&#x6570;&#x5217;&#x8868;&#xFF09;&#xFF1A;&#x57FA;&#x7C7B;1&#x6784;&#x9020;&#x51FD;&#x6570;&#xFF08;&#x53C2;&#x6570;&#x5217;&#x8868;&#xFF09;&#xFF0C;&#x57FA;&#x7C7B;2&#x6784;&#x9020;&#x51FD;&#x6570;&#xFF08;&#x53C2;&#x6570;&#x5217;&#x8868;&#xFF09;&#xFF0C;&#x57FA;&#x7C7B;3&#x6784;&#x9020;&#x51FD;&#x6570;&#xFF08;&#x53C2;&#x6570;&#x5217;&#x8868;&#xFF09;</span><br><span class="line">    {&#x6D3E;&#x751F;&#x7C7B;&#x4E2D;&#x65B0;&#x589E;&#x6570;&#x6210;&#x5458;&#x521D;&#x59CB;&#x5316;&#x8BED;&#x53E5;}</span><br></pre></td></tr></table></figure>
+<p>&#x6D3E;&#x751F;&#x7C7B;&#x6784;&#x9020;&#x51FD;&#x6570;&#x7684;&#x6267;&#x884C;&#x987A;&#x5E8F;&#x4E3A;&#xFF1A;&#x5148;&#x8C03;&#x7528;&#x57FA;&#x7C7B;&#x7684;&#x6784;&#x9020;&#x51FD;&#x6570;&#x518D;&#x6267;&#x884C;&#x6D3E;&#x751F;&#x7C7B;&#x6784;&#x9020;&#x51FD;&#x6570;&#x7684;&#x51FD;&#x6570;&#x4F53;&#x3002;&#x8C03;&#x7528;&#x57FA;&#x7C7B;&#x6784;&#x9020;&#x51FD;&#x6570;&#x7684;&#x987A;&#x5E8F;&#x662F;&#x6309;&#x7167;&#x58F0;&#x660E;&#x6D3E;&#x751F;&#x7C7B;&#x65F6;&#x57FA;&#x7C7B;&#x51FA;&#x73B0;&#x7684;&#x987A;&#x5E8F;&#x3002;<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br></pre></td><td class="code"><pre><span class="line">class Teacher</span><br><span class="line">{</span><br><span class="line">public:</span><br><span class="line">    Teacher(string nam, int a, string t)</span><br><span class="line">    {</span><br><span class="line">        name = nam;</span><br><span class="line">        age = a;</span><br><span class="line">        title = t;</span><br><span class="line">    }</span><br><span class="line">    void display()</span><br><span class="line">    {</span><br><span class="line">        cout &lt;&lt; name &lt;&lt; endl;</span><br><span class="line">        cout &lt;&lt; age&lt;&lt; endl;</span><br><span class="line">        cout &lt;&lt; title &lt;&lt; endl;</span><br><span class="line">    }</span><br><span class="line">protected:</span><br><span class="line">    string name;</span><br><span class="line">    int age;</span><br><span class="line">    string title;</span><br><span class="line">};</span><br><span class="line"></span><br><span class="line">class Student // &#x58F0;&#x660E;&#x57FA;&#x7C7B;</span><br><span class="line">{</span><br><span class="line">public:</span><br><span class="line">    Student(char nam[], char s, float sco) // &#x57FA;&#x7C7B;&#x6784;&#x9020;&#x51FD;&#x6570;</span><br><span class="line">    {</span><br><span class="line">        strcpy(name1, nam);</span><br><span class="line">        sex = s;</span><br><span class="line">        score = sco;</span><br><span class="line">    }</span><br><span class="line">    void display( )</span><br><span class="line">    {</span><br><span class="line">        cout &lt;&lt; name1 &lt;&lt; endl;</span><br><span class="line">        cout &lt;&lt; sex &lt;&lt; endl;</span><br><span class="line">        cout &lt;&lt; score &lt;&lt; endl;</span><br><span class="line">    }</span><br><span class="line">protected:</span><br><span class="line">    string name1;</span><br><span class="line">    char sex;</span><br><span class="line">    float score;</span><br><span class="line">};</span><br><span class="line"></span><br><span class="line">class Gradute: public Teacher, public Student // &#x591A;&#x91CD;&#x7EE7;&#x627F;&#x7684;&#x6D3E;&#x751F;&#x7C7B;Graduate</span><br><span class="line">{</span><br><span class="line">public:</span><br><span class="line">    Gradute(string nam, int a, char s, string t, float sco, float w):</span><br><span class="line">    Teacher(nam, a, t), Student(nam, s, sco), wage(w){ }</span><br><span class="line">    void show( )</span><br><span class="line">    {</span><br><span class="line">        cout &lt;&lt; name &lt;&lt;endl;</span><br><span class="line">        cout &lt;&lt; age &lt;&lt;endl;</span><br><span class="line">        cout &lt;&lt; sex &lt;&lt;endl;</span><br><span class="line">        cout &lt;&lt; score &lt;&lt;endl;</span><br><span class="line">        cout &lt;&lt; title &lt;&lt;endl;</span><br><span class="line">        cout &lt;&lt; wage &lt;&lt;endl;</span><br><span class="line">    }</span><br><span class="line">private:</span><br><span class="line">    float wage;</span><br><span class="line">};</span><br></pre></td></tr></table></figure></p>
+<p>&#x4E24;&#x4E2A;&#x57FA;&#x7C7B;&#x4E2D;&#x7684;&#x6570;&#x636E;&#x6210;&#x5458;&#x58F0;&#x660E;&#x4E3A;protected&#xFF0C;&#x53EF;&#x4EE5;&#x901A;&#x8FC7;&#x6D3E;&#x751F;&#x7C7B;&#x7684;&#x6210;&#x5458;&#x51FD;&#x6570;&#x5F15;&#x7528;&#x57FA;&#x7C7B;&#x7684;&#x6210;&#x5458;&#x3002;<br>&#x4E24;&#x4E2A;&#x57FA;&#x7C7B;&#x5206;&#x522B;&#x7528;name&#x548C;name1&#x6765;&#x8868;&#x8FBE;&#x59D3;&#x540D;&#xFF0C;&#x867D;&#x7136;&#x662F;&#x540C;&#x4E00;&#x4E2A;&#x4EBA;&#x7684;&#x540D;&#x5B57;&#xFF0C;&#x56E0;&#x4E3A;&#x5982;&#x679C;&#x90FD;&#x662F;name&#xFF0C;&#x5728;&#x6D3E;&#x751F;&#x7C7B;&#x7684;&#x6210;&#x5458;&#x51FD;&#x6570;show&#x4E2D;&#x5F15;&#x7528;name&#x65F6;&#x4F1A;&#x51FA;&#x73B0;&#x4E8C;&#x4E49;&#x6027;&#x3002;<br>&#x5982;&#x679C;&#x4F7F;&#x7528;&#x4E86;&#x540C;&#x4E00;&#x4E2A;&#x540D;&#x5B57;&#xFF0C;&#x53EF;&#x4EE5;&#x5728;show&#x4E2D;&#x6307;&#x660E;&#x4F5C;&#x7528;&#x57DF;&#x6765;&#x533A;&#x5206;&#xFF0C;&#x4F8B;&#x5982;<br><code>cout &lt;&lt; Teacher::name &lt;&lt; endl;</code></p>
+<h3 id="&#x591A;&#x91CD;&#x7EE7;&#x627F;&#x7684;&#x4E8C;&#x4E49;&#x6027;"><a href="#&#x591A;&#x91CD;&#x7EE7;&#x627F;&#x7684;&#x4E8C;&#x4E49;&#x6027;" class="headerlink" title="&#x591A;&#x91CD;&#x7EE7;&#x627F;&#x7684;&#x4E8C;&#x4E49;&#x6027;"></a>&#x591A;&#x91CD;&#x7EE7;&#x627F;&#x7684;&#x4E8C;&#x4E49;&#x6027;</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br></pre></td><td class="code"><pre><span class="line">class A</span><br><span class="line">{</span><br><span class="line">public:</span><br><span class="line">    int a;</span><br><span class="line">    void display( );</span><br><span class="line">};</span><br><span class="line"></span><br><span class="line">class B</span><br><span class="line">{</span><br><span class="line">public:</span><br><span class="line">    int a;</span><br><span class="line">    void dispaly( );</span><br><span class="line">};</span><br><span class="line"></span><br><span class="line">class C: public A, public B</span><br><span class="line">{</span><br><span class="line">public:</span><br><span class="line">    int b;</span><br><span class="line">    void show( );</span><br><span class="line">};</span><br></pre></td></tr></table></figure>
+<p>&#x5982;&#x679C;&#x6267;&#x884C;&#x4EE5;&#x4E0B;&#x7A0B;&#x5E8F;<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">C c1;</span><br><span class="line">c1.a = 3;</span><br><span class="line">c1.display();</span><br></pre></td></tr></table></figure></p>
+<p>&#x7531;&#x4E8E;A&#x548C;B&#x4E2D;&#x90FD;&#x6709;&#x6570;&#x636E;&#x6210;&#x5458;a&#x548C;&#x6210;&#x5458;&#x51FD;&#x6570;display&#xFF0C;&#x65E0;&#x6CD5;&#x5224;&#x65AD;&#x8981;&#x8BBF;&#x95EE;&#x7684;&#x662F;&#x54EA;&#x4E00;&#x4E2A;&#x57FA;&#x7C7B;&#x7684;&#xFF0C;&#x53EF;&#x4EE5;&#x901A;&#x8FC7;&#x57FA;&#x7C7B;&#x540D;&#x9650;&#x5B9A;<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">c1.A::a = 3;</span><br><span class="line">c1.A::display();</span><br></pre></td></tr></table></figure></p>
+<p>&#x5982;&#x679C;&#x662F;&#x5728;&#x6D3E;&#x751F;&#x7C7B;C&#x4E2D;&#x901A;&#x8FC7;&#x6D3E;&#x751F;&#x7C7B;&#x6210;&#x5458;&#x51FD;&#x6570;show&#x8BBF;&#x95EE;&#x57FA;&#x7C7B;A&#x7684;&#xFF0C;&#x53EF;&#x4EE5;&#x4E0D;&#x5199;&#x5BF9;&#x8C61;&#x540D;&#x76F4;&#x63A5;&#x5199;<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">A::a = 3;</span><br><span class="line">A::display();</span><br></pre></td></tr></table></figure></p>
+<p>&#x5982;&#x679C;C&#x7C7B;&#x7684;&#x58F0;&#x660E;&#x6539;&#x4E3A;<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">class C: public A, public B</span><br><span class="line">{</span><br><span class="line">    int a;</span><br><span class="line">    void display( );</span><br><span class="line">};</span><br></pre></td></tr></table></figure></p>
+<p>&#x90A3;&#x4E48;&#x5B9A;&#x4E49;c1&#xFF0C;&#x5E76;&#x8C03;&#x7528;a&#x548C;display<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">C c1;</span><br><span class="line">c1.a = 3;</span><br><span class="line">c1.display();</span><br></pre></td></tr></table></figure></p>
+<p>&#x6267;&#x884C;&#x65F6;&#x8BBF;&#x95EE;&#x7684;&#x662F;&#x6D3E;&#x751F;&#x7C7B;C&#x4E2D;&#x7684;&#x6210;&#x5458;&#x3002;&#x57FA;&#x7C7B;&#x4E2D;&#x540C;&#x540D;&#x6210;&#x5458;&#x5728;&#x6D3E;&#x751F;&#x7C7B;&#x4E2D;&#x88AB;&#x5C4F;&#x853D;&#xFF0C;&#x6210;&#x4E3A;&#x4E0D;&#x53EF;&#x89C1;&#x3002;<br>&#x4E0D;&#x540C;&#x7684;&#x6210;&#x5458;&#x51FD;&#x6570;&#xFF0C;&#x53EA;&#x6709;&#x5728;&#x51FD;&#x6570;&#x540D;&#x548C;&#x53C2;&#x6570;&#x4E2A;&#x6570;&#x76F8;&#x540C;&#x3001;&#x7C7B;&#x578B;&#x5339;&#x914D;&#x7684;&#x60C5;&#x51B5;&#x4E0B;&#x624D;&#x4F1A;&#x540C;&#x540D;&#x8986;&#x76D6;&#xFF0C;&#x5982;&#x679C;&#x53EA;&#x6709;&#x51FD;&#x6570;&#x540D;&#x76F8;&#x540C;&#x800C;&#x53C2;&#x6570;&#x4E0D;&#x540C;&#x5219;&#x4E0D;&#x4F1A;</p>
+
+      
+    </div>
+
+    
+
+    
+    
+    
+
+    
+
+    
+      
+    
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+      
+      
+
+      
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
+            
+              <a href="/passages/C++程序设计Day-0x09/" rel="next" title="C++程序设计Day-0x09">
+                <i class="fa fa-chevron-left"></i> C++程序设计Day-0x09
+              </a>
+            
+          </div>
+
+          <span class="post-nav-divider"></span>
+
+          <div class="post-nav-prev post-nav-item">
+            
+          </div>
+        </div>
+      
+
+      
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+  </div>
+
+
+          </div>
+          
+
+  
+
+
+
+        </div>
+        
+          
+  
+  <div class="sidebar-toggle">
+    <div class="sidebar-toggle-line-wrap">
+      <span class="sidebar-toggle-line sidebar-toggle-line-first"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-middle"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-last"></span>
+    </div>
+  </div>
+
+  <aside id="sidebar" class="sidebar">
+    <div class="sidebar-inner">
+
+      
+
+      
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap">
+            Table of Contents
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview-wrap">
+            Overview
+          </li>
+        </ul>
+      
+
+      <div class="site-overview-wrap sidebar-panel">
+        <div class="site-overview">
+          <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+            
+              <p class="site-author-name" itemprop="name">Ma Sicheng</p>
+              <div class="site-description motion-element" itemprop="description"></div>
+          </div>
+
+          
+            <nav class="site-state motion-element">
+              
+                <div class="site-state-item site-state-posts">
+                
+                  <a href="/archives/">
+                
+                    <span class="site-state-item-count">16</span>
+                    <span class="site-state-item-name">posts</span>
+                  </a>
+                </div>
+              
+
+              
+
+              
+            </nav>
+          
+
+          
+
+          
+
+          
+
+          
+
+          
+          
+
+          
+            
+          
+          
+
+        </div>
+      </div>
+
+      
+      <!--noindex-->
+        <div class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+            
+            
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#C-程序设计Day-0x10"><span class="nav-number">1.</span> <span class="nav-text">C++程序设计Day-0x10</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#继承和派生"><span class="nav-number">2.</span> <span class="nav-text">继承和派生</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#多重继承"><span class="nav-number">2.1.</span> <span class="nav-text">多重继承</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#多重继承的二义性"><span class="nav-number">2.1.1.</span> <span class="nav-text">多重继承的二义性</span></a></li></ol></li></ol></li></ol></div>
+            
+
+          </div>
+        </div>
+      <!--/noindex-->
+      
+
+      
+
+    </div>
+  </aside>
+  
+
+
+        
+      </div>
+    </main>
+
+    <footer id="footer" class="footer">
+      <div class="footer-inner">
+        <div class="copyright">&copy; <span itemprop="copyrightYear">2020</span>
+  <span class="with-love" id="animate">
+    <i class="fa fa-user"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">Ma Sicheng</span>
+
+  
+
+  
+</div>
+
+
+  <div class="powered-by">Powered by <a href="https://hexo.io" class="theme-link" rel="noopener" target="_blank">Hexo</a> v3.9.0</div>
+
+
+
+  <span class="post-meta-divider">|</span>
+
+
+
+  <div class="theme-info">Theme – <a href="https://theme-next.org" class="theme-link" rel="noopener" target="_blank">NexT.Muse</a> v7.0.1</div>
+
+
+
+
+        
+
+
+
+
+
+
+
+
+        
+      </div>
+    </footer>
+
+    
+      <div class="back-to-top">
+        <i class="fa fa-arrow-up"></i>
+        
+      </div>
+    
+
+    
+
+    
+
+    
+  </div>
+
+  
+
+<script>
+  if (Object.prototype.toString.call(window.Promise) !== '[object Function]') {
+    window.Promise = null;
+  }
+</script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  <script src="/lib/jquery/index.js?v=2.1.3"></script>
+
+  
+  <script src="/lib/velocity/velocity.min.js?v=1.2.1"></script>
+
+  
+  <script src="/lib/velocity/velocity.ui.min.js?v=1.2.1"></script>
+
+
+  
+
+
+  <script src="/js/src/utils.js?v=7.0.1"></script>
+
+  <script src="/js/src/motion.js?v=7.0.1"></script>
+
+
+
+  
+  
+
+
+  <script src="/js/src/schemes/muse.js?v=7.0.1"></script>
+
+
+
+  
+  <script src="/js/src/scrollspy.js?v=7.0.1"></script>
+<script src="/js/src/post-details.js?v=7.0.1"></script>
+
+
+
+  
+
+
+  <script src="/js/src/next-boot.js?v=7.0.1"></script>
+
+
+  
+
+  
+
+  
+
+  
+
+
+  
+
+
+  
+
+
+
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+</body>
+</html>
