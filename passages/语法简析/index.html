@@ -1,0 +1,814 @@
+<!DOCTYPE html>
+
+
+
+
+
+
+
+
+
+
+
+
+  
+
+
+<html class="theme-next muse use-motion" lang>
+<head><meta name="generator" content="Hexo 3.9.0">
+  <meta charset="UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=2">
+<meta name="theme-color" content="#222">
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<link rel="stylesheet" href="/lib/font-awesome/css/font-awesome.min.css?v=4.6.2">
+
+<link rel="stylesheet" href="/css/main.css?v=7.0.1">
+
+
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon-next.png?v=7.0.1">
+
+
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32-next.png?v=7.0.1">
+
+
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16-next.png?v=7.0.1">
+
+
+  <link rel="mask-icon" href="/images/logo.svg?v=7.0.1" color="#222">
+
+
+
+
+
+
+
+<script id="hexo.configurations">
+  var NexT = window.NexT || {};
+  var CONFIG = {
+    root: '/',
+    scheme: 'Muse',
+    version: '7.0.1',
+    sidebar: {"position":"left","display":"post","offset":12,"onmobile":false,"dimmer":false},
+    back2top: true,
+    back2top_sidebar: false,
+    fancybox: false,
+    fastclick: false,
+    lazyload: false,
+    tabs: true,
+    motion: {"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},
+    algolia: {
+      applicationID: '',
+      apiKey: '',
+      indexName: '',
+      hits: {"per_page":10},
+      labels: {"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}
+    }
+  };
+</script>
+
+
+  
+
+
+
+
+  <meta name="description" content="&amp;#x8BED;&amp;#x6CD5;&amp;#x7B80;&amp;#x6790;&amp;#x5B66;&amp;#x4E60;&amp;#x8BED;&amp;#x6CD5;&amp;#x7684;&amp;#x76EE;&amp;#x7684;&amp;#x2014;&amp;#x2014;-&amp;#x9020;&amp;#x53E5; &amp;#x9996;&amp;#x5148;&amp;#x4E00;&amp;#x4E2A;&amp;#x6982;&amp;#x5FF5;&amp;#x662F;&amp;#xFF0C;&amp;#x4EC0;&amp;#x4E4">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Just Mess">
+<meta property="og:url" content="http://yoursite.com/passages/语法简析/index.html">
+<meta property="og:site_name" content="Just Mess">
+<meta property="og:description" content="&amp;#x8BED;&amp;#x6CD5;&amp;#x7B80;&amp;#x6790;&amp;#x5B66;&amp;#x4E60;&amp;#x8BED;&amp;#x6CD5;&amp;#x7684;&amp;#x76EE;&amp;#x7684;&amp;#x2014;&amp;#x2014;-&amp;#x9020;&amp;#x53E5; &amp;#x9996;&amp;#x5148;&amp;#x4E00;&amp;#x4E2A;&amp;#x6982;&amp;#x5FF5;&amp;#x662F;&amp;#xFF0C;&amp;#x4EC0;&amp;#x4E4">
+<meta property="og:locale" content="default">
+<meta property="og:updated_time" content="2021-06-15T00:17:07.429Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="Just Mess">
+<meta name="twitter:description" content="&amp;#x8BED;&amp;#x6CD5;&amp;#x7B80;&amp;#x6790;&amp;#x5B66;&amp;#x4E60;&amp;#x8BED;&amp;#x6CD5;&amp;#x7684;&amp;#x76EE;&amp;#x7684;&amp;#x2014;&amp;#x2014;-&amp;#x9020;&amp;#x53E5; &amp;#x9996;&amp;#x5148;&amp;#x4E00;&amp;#x4E2A;&amp;#x6982;&amp;#x5FF5;&amp;#x662F;&amp;#xFF0C;&amp;#x4EC0;&amp;#x4E4">
+
+
+
+
+
+
+  <link rel="canonical" href="http://yoursite.com/passages/语法简析/">
+
+
+
+<script id="page.configurations">
+  CONFIG.page = {
+    sidebar: "",
+  };
+</script>
+
+  <title> | Just Mess</title>
+  
+
+
+
+
+
+
+
+
+
+
+
+
+  <noscript>
+  <style>
+  .use-motion .motion-element,
+  .use-motion .brand,
+  .use-motion .menu-item,
+  .sidebar-inner,
+  .use-motion .post-block,
+  .use-motion .pagination,
+  .use-motion .comments,
+  .use-motion .post-header,
+  .use-motion .post-body,
+  .use-motion .collection-title { opacity: initial; }
+
+  .use-motion .logo,
+  .use-motion .site-title,
+  .use-motion .site-subtitle {
+    opacity: initial;
+    top: initial;
+  }
+
+  .use-motion .logo-line-before i { left: initial; }
+  .use-motion .logo-line-after i { right: initial; }
+  </style>
+</noscript>
+
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage" lang="default">
+
+  
+  
+    
+  
+
+  <div class="container sidebar-position-left page-post-detail">
+    <div class="headband"></div>
+
+    <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-brand-wrapper">
+  <div class="site-meta">
+    
+
+    <div class="custom-logo-site-title">
+      <a href="/" class="brand" rel="start">
+        <span class="logo-line-before"><i></i></span>
+        <span class="site-title">Just Mess</span>
+        <span class="logo-line-after"><i></i></span>
+      </a>
+    </div>
+    
+      
+        <p class="site-subtitle">记录日常学习总结</p>
+      
+    
+    
+  </div>
+
+  <div class="site-nav-toggle">
+    <button aria-label="Toggle navigation bar">
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+    </button>
+  </div>
+</div>
+
+
+
+<nav class="site-nav">
+  
+    <ul id="menu" class="menu">
+      
+        
+        
+        
+          
+          <li class="menu-item menu-item-home">
+
+    
+    
+    
+      
+    
+
+    
+
+    <a href="/" rel="section"><i class="menu-item-icon fa fa-fw fa-home"></i> <br>Home</a>
+
+  </li>
+        
+        
+        
+          
+          <li class="menu-item menu-item-archives">
+
+    
+    
+    
+      
+    
+
+    
+
+    <a href="/archives/" rel="section"><i class="menu-item-icon fa fa-fw fa-archive"></i> <br>Archives</a>
+
+  </li>
+
+      
+      
+    </ul>
+  
+
+  
+    
+
+  
+
+  
+</nav>
+
+
+
+  
+
+
+
+</div>
+    </header>
+
+    
+
+
+    <main id="main" class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          
+          <div id="content" class="content">
+            
+
+  <div id="posts" class="posts-expand">
+    
+
+  
+
+  
+  
+  
+
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/passages/语法简析/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="Ma Sicheng">
+      <meta itemprop="description" content>
+      <meta itemprop="image" content="/images/avatar.gif">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Just Mess">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+
+              
+            
+          </h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+
+            
+            
+            
+
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">Posted on</span>
+              
+
+              
+                
+              
+
+              <time title="Created: 2021-06-13 16:26:37" itemprop="dateCreated datePublished" datetime="2021-06-13T16:26:37+08:00">2021-06-13</time>
+            
+
+            
+              
+
+              
+                
+                <span class="post-meta-divider">|</span>
+                
+
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-calendar-check-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">Edited on</span>
+                
+                <time title="Modified: 2021-06-15 08:17:07" itemprop="dateModified" datetime="2021-06-15T08:17:07+08:00">2021-06-15</time>
+              
+            
+          </span>
+
+          
+
+          
+            
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        <h1 id="&#x8BED;&#x6CD5;&#x7B80;&#x6790;"><a href="#&#x8BED;&#x6CD5;&#x7B80;&#x6790;" class="headerlink" title="&#x8BED;&#x6CD5;&#x7B80;&#x6790;"></a>&#x8BED;&#x6CD5;&#x7B80;&#x6790;</h1><p>&#x5B66;&#x4E60;&#x8BED;&#x6CD5;&#x7684;&#x76EE;&#x7684;&#x2014;&#x2014;-<strong>&#x9020;&#x53E5;</strong></p>
+<p>&#x9996;&#x5148;&#x4E00;&#x4E2A;&#x6982;&#x5FF5;&#x662F;&#xFF0C;&#x4EC0;&#x4E48;&#x662F;&#x7B80;&#x5355;&#x53E5;&#xFF1F;</p>
+<p>&#x4E0D;&#x80FD;&#x518D;&#x8FDB;&#x884C;&#x62C6;&#x5206;&#x7684;&#x53E5;&#x5B50;&#x4E5F;&#x5C31;&#x662F;<strong>&#x7B80;&#x5355;&#x53E5;</strong>&#xFF0C;&#x957F;&#x53E5;&#x5B50;&#x5C31;&#x662F;&#x7B80;&#x5355;&#x53E5;&#x7684;&#x7EC4;&#x5408;&#x3002;&#x800C;&#x7B80;&#x5355;&#x53E5;&#x6240;&#x8981;&#x8868;&#x8FBE;&#x7684;&#x5185;&#x5BB9;&#x7528;&#x4E2D;&#x6587;&#x7684;&#x89D2;&#x5EA6;&#x6765;&#x8BB2;&#x5C31;&#x662F;<strong>&#x201C;&#x4EC0;&#x4E48; &#x600E;&#x4E48;&#x6837;&#x201D;</strong>&#xFF0C;&#x7EDD;&#x5927;&#x90E8;&#x4EFD;&#x53E5;&#x5B50;&#x7C97;&#x7565;&#x7684;&#x5206;&#x5C31;&#x53EA;&#x6709;&#x8FD9;&#x4E24;&#x90E8;&#x5206;&#x3002;&#x540C;&#x65F6;&#xFF0C;&#x8FD9;&#x4E24;&#x90E8;&#x5206;&#x5BF9;&#x5E94;&#x7684;&#x5C31;&#x662F;&#x82F1;&#x8BED;&#x4E2D;&#x6700;&#x91CD;&#x8981;&#x7684;&#x4E24;&#x4E2A;&#x90E8;&#x5206;<strong>&#x201C;&#x4E3B;&#x8BED;&#x201D;</strong>&#x3001;<strong>&#x201C;&#x8C13;&#x8BED;&#x201D;</strong>&#x3002;&#x6362;&#x53E5;&#x8BDD;&#x8BF4;&#xFF0C;&#x6240;&#x6709;&#x7684;&#x82F1;&#x8BED;&#x53E5;&#x5B50;&#x7ED3;&#x6784;&#x90FD;&#x662F;&#x4E3B;&#x8BED;+&#x8C13;&#x8BED;&#x3002;</p>
+<p><strong>&#x4E3B;&#x8BED;</strong>&#x6307;&#x7684;&#x662F;&#x4EBA;&#x6216;&#x7269;&#xFF0C;&#x800C;<strong>&#x8C13;&#x8BED;</strong>&#x6307;&#x52A8;&#x4F5C;&#x4E5F;&#x6307;&#x53D1;&#x751F;&#x4E86;&#x4EC0;&#x4E48;&#x4E8B;&#x3002;</p>
+<h2 id="&#x52A8;&#x8BCD;&#xFF08;Verbs&#xFF09;&#x7684;&#x5206;&#x7C7B;"><a href="#&#x52A8;&#x8BCD;&#xFF08;Verbs&#xFF09;&#x7684;&#x5206;&#x7C7B;" class="headerlink" title="&#x52A8;&#x8BCD;&#xFF08;Verbs&#xFF09;&#x7684;&#x5206;&#x7C7B;"></a>&#x52A8;&#x8BCD;&#xFF08;Verbs&#xFF09;&#x7684;&#x5206;&#x7C7B;</h2><p>&#x52A8;&#x8BCD;&#x53EF;&#x4EE5;&#x5206;&#x4E3A;&#x4EE5;&#x4E0B;&#x51E0;&#x79CD;&#xFF1A;</p>
+<ul>
+<li><p>&#x53EF;&#x4EE5;&#x72EC;&#x7ACB;&#x5B8C;&#x6210;&#x7684;&#x52A8;&#x4F5C;&#xFF1A;&#x4E0D;&#x53CA;&#x7269;&#x52A8;&#x8BCD;&#xFF08;Intransitive Verbs&#xFF09;&#x3002;</p>
+<p>He <em>sleeps</em>.</p>
+</li>
+<li><p>&#x6709;&#x4E00;&#x4E2A;&#x52A8;&#x4F5C;&#x7684;&#x627F;&#x53D7;&#x8005;&#xFF1A;&#x53CA;&#x7269;&#x52A8;&#x8BCD;&#xFF08;Transitive Verbs&#xFF09;&#x3002;</p>
+<p> I <em>love</em> u(&#x5BBE;&#x8BED;).</p>
+</li>
+<li><p>&#x6709;&#x4E24;&#x4E2A;&#x52A8;&#x4F5C;&#x627F;&#x53D7;&#x8005;&#xFF1A;&#x53CC;&#x53CA;&#x7269;&#x52A8;&#x8BCD;&#xFF08;Ditransitive Verbs&#xFF09;&#x3002; </p>
+<p>I <em>teach</em> u(&#x76F4;&#x63A5;&#x5BBE;&#x8BED;) English(&#x95F4;&#x63A5;&#x5BBE;&#x8BED;).</p>
+</li>
+<li><p>&#x53EA;&#x6709;&#x4E00;&#x4E2A;&#x52A8;&#x4F5C;&#x7684;&#x627F;&#x53D7;&#x8005;(&#x533A;&#x522B;&#x4E8E;2)&#xFF1A;&#x590D;&#x6742;&#x53CA;&#x7269;&#x52A8;&#x8BCD;&#xFF08;Complex-Transitive Verbs&#xFF09;&#x3002;</p>
+<p>Teacher <em>considers</em> u(&#x5BBE;&#x8BED;) clear(&#x5BBE;&#x8BED;&#x8865;&#x8BED;).</p>
+</li>
+<li><p>&#x4E0D;&#x662F;&#x5E38;&#x89C4;&#x610F;&#x4E49;&#x4E0A;&#x7684;&#x52A8;&#x4F5C;&#xFF1A;&#x7CFB;&#x52A8;&#x8BCD;&#xFF08;Linking Verbs&#xFF09;&#x3002;&#x4F5C;&#x7528;&#x662F;&#x5C06;&#x52A8;&#x8BCD;&#x4E4B;&#x540E;&#x7684;&#x4FE1;&#x606F;&#x8D4B;&#x4E88;&#x7ED9;&#x524D;&#x8005;&#x3002;</p>
+<p>He <em>is</em> tall(&#x4E3B;&#x8BED;)&#x8865;&#x8BED;&#xFF0C;&#x4E5F;&#x79F0;&#x8868;&#x8BED;).</p>
+</li>
+</ul>
+<p>&#x4EE5;&#x4E0A;&#x4E94;&#x79CD;&#x52A8;&#x8BCD;&#x5BF9;&#x5E94;&#x7684;&#x5C31;&#x662F;&#x82F1;&#x8BED;&#x4E2D;&#x7684;&#x4E94;&#x79CD;&#x7B80;&#x5355;&#x53E5;<strong>&#x53E5;&#x578B;</strong>&#x3002;</p>
+<p>&#x53E6;&#x6CE8;&#x610F;&#xFF0C;&#x4EE5;&#x4E0A;&#x4E94;&#x4E2A;&#x4F8B;&#x53E5;&#x4E2D;&#xFF0C;&#x9664;&#x4E3B;&#x8BED;&#x4EE5;&#x5916;&#x5176;&#x4F59;&#x90E8;&#x5206;&#x7EDF;&#x79F0;&#x4E3A;&#x8C13;&#x8BED;&#xFF0C;&#x8C13;&#x8BED;&#x52A8;&#x8BCD;&#x4E5F;&#x5C31;&#x662F;&#x4E0A;&#x9762;&#x659C;&#x4F53;&#x90E8;&#x5206;&#x53EA;&#x662F;&#x8C13;&#x8BED;&#x4E2D;&#x7684;&#x4E00;&#x90E8;&#x5206;&#x3002;&#x6240;&#x4EE5;&#x6211;&#x4EEC;&#x9700;&#x8981;&#x6CE8;&#x610F;&#xFF0C;<strong>&#x5E38;&#x8BF4;&#x7684;&#x201C;&#x4E3B;&#x8C13;&#x5BBE;&#x201D;&#x7ED3;&#x6784;&#x4E2D;&#x7684;&#x201C;&#x8C13;&#x201D;&#x6307;&#x7684;&#x662F;&#x8C13;&#x8BED;&#x52A8;&#x8BCD;&#x800C;&#x4E0D;&#x662F;&#x8C13;&#x8BED;</strong>&#x3002;</p>
+<h2 id="&#x7B80;&#x5355;&#x53E5;&#x7684;&#x6210;&#x5206;&#xFF08;Parts-Of-Speech&#xFF09;"><a href="#&#x7B80;&#x5355;&#x53E5;&#x7684;&#x6210;&#x5206;&#xFF08;Parts-Of-Speech&#xFF09;" class="headerlink" title="&#x7B80;&#x5355;&#x53E5;&#x7684;&#x6210;&#x5206;&#xFF08;Parts Of Speech&#xFF09;"></a>&#x7B80;&#x5355;&#x53E5;&#x7684;&#x6210;&#x5206;&#xFF08;Parts Of Speech&#xFF09;</h2><ol>
+<li><p>&#x4E3B;&#x8BED; Subject</p>
+</li>
+<li><p>&#x8C13;&#x8BED;(&#x52A8;&#x8BCD;) Predicate Verb</p>
+</li>
+<li><p>&#x5BBE;&#x8BED; Object</p>
+</li>
+<li><p>&#x5BBE;&#x8BED;&#x8865;&#x8BED; Object Complement</p>
+</li>
+<li><p>&#x4E3B;&#x8BED;&#x8865;&#x8BED; Subject Complement</p>
+</li>
+<li><p>&#x5B9A;&#x8BED; Attributive</p>
+<p>&#x4E3B;&#x8981;&#x7528;&#x6765;&#x4FEE;&#x9970;&#x4E3B;&#x8BED;&#x548C;&#x5BBE;&#x8BED;&#x3002;<em>The little</em> boy eat <em>a big</em> apple.</p>
+</li>
+<li><p>&#x72B6;&#x8BED; Adverbial</p>
+<p>&#x4E3B;&#x8981;&#x7528;&#x6765;&#x4FEE;&#x9970;&#x8C13;&#x8BED;&#x52A8;&#x8BCD;&#x3002;The boy ate <em>quickly</em>.</p>
+</li>
+<li><p>&#x540C;&#x4F4D;&#x8BED; Appositive</p>
+<p>He, <em>a boy</em>, eats an apple.</p>
+</li>
+</ol>
+<p>&#x800C;&#x7B80;&#x5355;&#x53E5;&#x7684;&#x591A;&#x5C42;&#x5957;&#x7528;&#xFF0C;&#x5C31;&#x6784;&#x6210;&#x4E86;<strong>&#x590D;&#x6742;&#x53E5;</strong>&#xFF0C;&#x4E5F;&#x5C31;&#x662F;<strong>&#x4E3B;&#x53E5;</strong>&#x548C;&#x4E0D;&#x9650;&#x6570;&#x91CF;&#x7684;&#x4ECE;&#x53E5;&#x7684;&#x7EC4;&#x5408;&#x3002;</p>
+<p>&#x5F53;&#x4ECE;&#x53E5;&#x53EF;&#x4EE5;&#x5145;&#x5F53;&#x4E3B;&#x8BED;&#x65F6;&#xFF0C;&#x4ECE;&#x53E5;&#x5C31;&#x53EF;&#x4EE5;&#x79F0;&#x4E3A;<em>&#x4E3B;&#x8BED;&#x4ECE;&#x53E5;</em>&#xFF0C;&#x5F53;&#x4ECE;&#x53E5;&#x53EF;&#x4EE5;&#x5145;&#x5F53;&#x5BBE;&#x8BED;&#x65F6;&#xFF0C;&#x4ECE;&#x53E5;&#x5C31;&#x53EF;&#x4EE5;&#x79F0;&#x4E3A;<em>&#x5BBE;&#x8BED;&#x4ECE;&#x53E5;</em>&#xFF0C;&#x540C;&#x7406;&#x5145;&#x5F53;&#x8868;&#x8BED;&#x3001;&#x540C;&#x4F4D;&#x8BED;&#x65F6;&#xFF0C;&#x5C31;&#x53EF;&#x4EE5;&#x79F0;&#x4E4B;&#x4E3A;<em>&#x8868;&#x8BED;&#x4ECE;&#x53E5;</em>&#x548C;&#x540C;&#x4F4D;&#x8BED;&#x4ECE;&#x53E5;&#x3002;&#x4E0A;&#x9762;&#x56DB;&#x79CD;&#x4ECE;&#x53E5;&#x90FD;&#x5177;&#x6709;&#x540D;&#x8BCD;&#x7684;&#x6027;&#x8D28;&#xFF0C;&#x6240;&#x4EE5;&#x53C8;&#x5408;&#x79F0;&#x4E3A;<strong>&#x540D;&#x8BCD;&#x6027;&#x4ECE;&#x53E5;</strong>&#x3002;&#x548C;&#x540D;&#x8BCD;&#x6027;&#x4ECE;&#x53E5;&#x540C;&#x7B49;&#x7EA7;&#x522B;&#x7684;&#x8FD8;&#x6709;<strong>&#x5B9A;&#x8BED;&#x4ECE;&#x53E5;</strong>&#x548C;<strong>&#x72B6;&#x8BED;&#x4ECE;&#x53E5;</strong>&#xFF0C;&#x90FD;&#x8868;&#x793A;&#x4E86;&#x4ECE;&#x53E5;&#x5728;&#x53E5;&#x4E2D;&#x4E0D;&#x540C;&#x7684;&#x6027;&#x8D28;&#x3002;</p>
+<h2 id="&#x8BCD;&#x7C7B;"><a href="#&#x8BCD;&#x7C7B;" class="headerlink" title="&#x8BCD;&#x7C7B;"></a>&#x8BCD;&#x7C7B;</h2><p>&#x4F46;&#x662F;&#x540C;&#x4E00;&#x79CD;&#x53E5;&#x578B;&#x6784;&#x6210;&#x7684;&#x4E24;&#x53E5;&#x8BDD;&#xFF0C;&#x6240;&#x5305;&#x542B;&#x8BCD;&#x7684;&#x7C7B;&#x578B;&#x5374;&#x4E0D;&#x4E00;&#x5B9A;&#x76F8;&#x540C;&#xFF0C;&#x90A3;&#x4E48;&#x5C31;&#x5F15;&#x5165;&#x4E86;&#x8BCD;&#x7C7B;&#x7684;&#x6982;&#x5FF5;&#xFF0C;&#x5E76;&#x4E14;&#x5C06;&#x8BCD;&#x7C7B;&#x5206;&#x4E3A;&#x4EE5;&#x4E0B;&#x51E0;&#x79CD;&#x3002;</p>
+<ol>
+<li>&#x540D;&#x8BCD; Nouns &#x8868;&#x4EBA;&#x548C;&#x7269;</li>
+<li>&#x51A0;&#x8BCD; Articles &#x8BF4;&#x660E;&#x4EBA;&#x548C;&#x4E8B;&#x7269; a&#x3001;an</li>
+<li>&#x4EE3;&#x8BCD; pronous &#x4EE3;&#x66FF;&#x4EBA;&#x548C;&#x7269; I&#x3001;you&#x3001;he&#x3001;she</li>
+<li>&#x5F62;&#x5BB9;&#x8BCD; Adjectis &#x5F62;&#x5BB9;&#x4EBA;&#x548C;&#x7269;</li>
+<li>&#x6570;&#x8BCD; Numerals &#x8868;&#x793A;&#x6570;&#x91CF;</li>
+<li>&#x526F;&#x8BCD; Adverbs &#x4FEE;&#x9970;&#x52A8;&#x4F5C;&#x6216;&#x5F62;&#x5BB9;&#x8BCD;</li>
+<li>&#x4ECB;&#x8BCD; Prepositions &#x8868;&#x793A;&#x548C;&#x5176;&#x4ED6;&#x8BCD;&#x5173;&#x7CFB;&#x7684;&#x8BCD; with</li>
+<li>&#x53F9;&#x8BCD; Interjections &#x8868;&#x611F;&#x53F9;</li>
+<li>&#x8FDE;&#x8BCD; Conjuctions &#x8FDE;&#x63A5;&#x8BCD;&#x548C;&#x53E5;</li>
+<li>&#x52A8;&#x8BCD; Verbs</li>
+</ol>
+<p>&#x540C;&#x65F6;&#xFF0C;&#x9700;&#x8981;&#x5BF9;&#x53E5;&#x5B50;&#x6210;&#x5206;&#x548C;&#x8BCD;&#x7C7B;&#x8FDB;&#x884C;&#x533A;&#x5206;&#x3002;&#x5176;&#x4E2D;&#x9664;&#x4E86;&#x8C13;&#x8BED;&#x52A8;&#x8BCD;&#x4E00;&#x5B9A;&#x662F;&#x52A8;&#x8BCD;&#x4EE5;&#x5916;&#xFF0C;&#x5176;&#x4F59;&#x6240;&#x6709;&#x6210;&#x5206;&#x90FD;&#x6709;&#x53EF;&#x80FD;&#x5305;&#x542B;&#x4E0D;&#x540C;&#x7684;&#x8BCD;&#x7C7B;&#x3002;</p>
+<p>&#x63A5;&#x7740;&#x8FD9;&#x4E2A;&#x8BDD;&#x9898;&#xFF0C;&#x63A5;&#x4E0B;&#x6765;&#x5C06;&#x5BF9;&#x8C13;&#x8BED;&#x52A8;&#x8BCD;&#x4F5C;&#x4E00;&#x5B9A;&#x7684;&#x8BF4;&#x660E;&#x548C;&#x89E3;&#x91CA;&#x3002;</p>
+<h3 id="&#x8C13;&#x8BED;&#x52A8;&#x8BCD;&#x7684;&#x4E09;&#x5927;&#x4F5C;&#x7528;"><a href="#&#x8C13;&#x8BED;&#x52A8;&#x8BCD;&#x7684;&#x4E09;&#x5927;&#x4F5C;&#x7528;" class="headerlink" title="&#x8C13;&#x8BED;&#x52A8;&#x8BCD;&#x7684;&#x4E09;&#x5927;&#x4F5C;&#x7528;"></a>&#x8C13;&#x8BED;&#x52A8;&#x8BCD;&#x7684;&#x4E09;&#x5927;&#x4F5C;&#x7528;</h3><ol>
+<li><p>&#x8868;&#x793A;&#x52A8;&#x4F5C;&#x7684;&#x65F6;&#x95F4;Tense&#xFF1A;&#x73B0;&#x5728;&#x3001;&#x8FC7;&#x53BB;&#x3001;&#x5C06;&#x6765;&#x3001;&#x8FC7;&#x53BB;&#x5C06;&#x6765;</p>
+</li>
+<li><p>&#x8868;&#x793A;&#x52A8;&#x4F5C;&#x7684;&#x72B6;&#x6001;Aspect&#xFF1A;&#x4E00;&#x822C;&#x3001;&#x5B8C;&#x6210;&#x3001;&#x8FDB;&#x884C;&#x3001;&#x5B8C;&#x6210;&#x8FDB;&#x884C;</p>
+<p>&#x4EE5;&#x4E0A;&#x4E24;&#x79CD;&#x7EDF;&#x79F0;&#x4E3A;<strong>&#x65F6;&#x6001;</strong>&#xFF0C;&#x6309;&#x7167;&#x4E0D;&#x540C;&#x7684;&#x7EC4;&#x5408;&#xFF0C;&#x4E5F;&#x5C31;&#x4EA7;&#x751F;16&#x79CD;&#x4E0D;&#x540C;&#x7684;&#x65F6;&#x6001;&#x3002;</p>
+</li>
+<li><p>&#x8868;&#x793A;&#x52A8;&#x4F5C;&#x7684;&#x5047;&#x8BBE;&#x3001;&#x60C5;&#x611F;Mood&#xFF1A;&#x865A;&#x62DF;&#x3001;&#x9648;&#x8FF0;&#x3001;&#x7948;&#x4F7F;&#x8BED;&#x6C14;&#x3002;</p>
+</li>
+</ol>
+<p>&#x4F46;&#x662F;&#x52A8;&#x8BCD;&#x5355;&#x72EC;&#x5728;&#x53E5;&#x5B50;&#x4E2D;&#x662F;&#x65E0;&#x6CD5;&#x5B8C;&#x6210;&#x8868;&#x8FBE;&#x5426;&#x5B9A;&#x3001;&#x53EF;&#x80FD;&#x6027;&#x3001;&#x5FC5;&#x987B;&#x6027;&#x7B49;&#x610F;&#x601D;&#x7684;&#x4EFB;&#x52A1;&#xFF0C;&#x90A3;&#x4E48;&#x5C31;&#x9700;&#x8981;<strong>&#x52A9;&#x52A8;&#x8BCD;</strong>&#xFF08;Auxiliary Verbs&#xFF09;&#x53D1;&#x6325;&#x4F5C;&#x7528;&#x3002;</p>
+<h3 id="&#x52A9;&#x52A8;&#x8BCD;"><a href="#&#x52A9;&#x52A8;&#x8BCD;" class="headerlink" title="&#x52A9;&#x52A8;&#x8BCD;"></a>&#x52A9;&#x52A8;&#x8BCD;</h3><p>&#x4E3A;&#x4E86;&#x8868;&#x793A;&#x505A;&#x8FC7;&#x4E86;&#xFF08;&#x5B8C;&#x6210;&#x65F6;&#xFF09;&#xFF0C;&#x9700;&#x8981;&#x7528;&#x5230;&#x52A9;&#x52A8;&#x8BCD;have done&#x3002;</p>
+<p>&#x4E3A;&#x4E86;&#x8868;&#x793A;&#x6B63;&#x5728;&#x505A;&#xFF08;&#x8FDB;&#x884C;&#x65F6;&#xFF09;&#xFF0C;&#x9700;&#x8981;&#x7528;&#x5230;&#x52A9;&#x52A8;&#x8BCD;be doing&#x3002;</p>
+<p>&#x4E3A;&#x4E86;&#x8868;&#x793A;&#x88AB;&#x505A;&#xFF08;&#x88AB;&#x52A8;&#x6001;&#xFF09;&#xFF0C;&#x9700;&#x8981;&#x7528;&#x5230;&#x52A9;&#x52A8;&#x8BCD;be&#xFF0C;be done&#x3002;</p>
+<p>&#x4E3A;&#x4E86;&#x8868;&#x793A;&#x6709;&#x80FD;&#x529B;&#x505A;&#xFF0C;&#x9700;&#x8981;&#x7528;&#x5230;&#x52A9;&#x52A8;&#x8BCD;can&#xFF0C;can do&#x3002;</p>
+<p>&#x4E3A;&#x4E86;&#x8868;&#x793A;&#x6709;&#x53EF;&#x80FD;&#x505A;&#xFF0C;&#x9700;&#x8981;&#x7528;&#x5230;&#x52A9;&#x52A8;&#x8BCD;might&#xFF0C;might do&#x3002;</p>
+<p>&#x4E3A;&#x4E86;&#x8868;&#x793A;&#x6709;&#x4E49;&#x52A1;&#x505A;&#xFF0C;&#x9700;&#x8981;&#x7528;&#x5230;&#x52A9;&#x52A8;&#x8BCD;must&#xFF0C;must do&#x3002;</p>
+<p>&#x4E3A;&#x4E86;&#x8868;&#x793A;&#x6709;&#x5426;&#x5B9A;&#xFF0C;&#x9700;&#x8981;&#x7528;&#x5230;&#x52A9;&#x52A8;&#x8BCD;do&#xFF0C;do not do&#x3002;</p>
+<p>&#x5F53;&#x52A8;&#x8BCD;&#x5728;&#x5145;&#x5F53;&#x52A9;&#x52A8;&#x8BCD;&#x65F6;&#xFF0C;&#x4ED6;&#x7684;&#x4EFB;&#x52A1;&#x5C31;&#x662F;&#x8F85;&#x52A9;&#x52A8;&#x8BCD;&#xFF0C;&#x4F46;<strong>&#x4E0D;&#x5177;&#x5907;&#x5B9E;&#x9645;&#x542B;&#x4E49;</strong>&#xFF0C;&#x6240;&#x4EE5;&#x4E0D;&#x8981;&#x548C;&#x8FD9;&#x4E2A;&#x8BCD;&#x7684;&#x5176;&#x4ED6;&#x542B;&#x4E49;&#x5F04;&#x6DF7;&#x6DC6;&#x3002;</p>
+<p>&#x90A3;&#x4E48;&#x4E0E;&#x8C13;&#x8BED;&#x52A8;&#x8BCD;&#x76F8;&#x5BF9;&#x5E94;&#x7684;&#x5C31;&#x662F;<strong>&#x975E;&#x8C13;&#x8BED;&#x52A8;&#x8BCD;</strong>&#x3002;&#x8868;&#x793A;&#x52A8;&#x8BCD;&#x5728;&#x53E5;&#x5B50;&#x4E2D;&#x5145;&#x5F53;&#x7684;&#x6210;&#x5206;&#x4E0D;&#x662F;&#x8C13;&#x8BED;&#x3002;&#x975E;&#x8C13;&#x8BED;&#x52A8;&#x8BCD;&#x51E0;&#x4E4E;&#x53EF;&#x4EE5;&#x53D6;&#x4EE3;&#x6240;&#x6709;&#x7684;&#x4ECE;&#x53E5;&#xFF0C;&#x4ECE;&#x800C;&#x7B80;&#x5316;&#x53E5;&#x5B50;&#x3002;&#x53EA;&#x4E0D;&#x8FC7;&#x8FD9;&#x6837;&#x7684;&#x52A8;&#x8BCD;&#x5C31;&#x4E0D;&#x518D;&#x5177;&#x6709;&#x8868;&#x8FBE;&#x52A8;&#x4F5C;&#x65F6;&#x95F4;&#x3001;&#x72B6;&#x6001;&#x3001;&#x8BED;&#x6C14;&#x7684;&#x529F;&#x80FD;&#x3002;&#x5305;&#x62EC;<strong>&#x52A8;&#x8BCD;&#x4E0D;&#x5B9A;&#x5F0F;</strong>&#x3001;&#x73B0;&#x5728;&#x5206;&#x8BCD;&#x3001;<strong>&#x52A8;&#x540D;&#x8BCD;</strong>&#x3001;&#x8FC7;&#x53BB;&#x5206;&#x8BCD;&#x56DB;&#x79CD;&#x3002;</p>
+
+      
+    </div>
+
+    
+
+    
+    
+    
+
+    
+
+    
+      
+    
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+      
+      
+
+      
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
+            
+              <a href="/passages/句法/" rel="next" title>
+                <i class="fa fa-chevron-left"></i> 
+              </a>
+            
+          </div>
+
+          <span class="post-nav-divider"></span>
+
+          <div class="post-nav-prev post-nav-item">
+            
+              <a href="/passages/时态/" rel="prev" title>
+                 <i class="fa fa-chevron-right"></i>
+              </a>
+            
+          </div>
+        </div>
+      
+
+      
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+  </div>
+
+
+          </div>
+          
+
+  
+
+
+
+        </div>
+        
+          
+  
+  <div class="sidebar-toggle">
+    <div class="sidebar-toggle-line-wrap">
+      <span class="sidebar-toggle-line sidebar-toggle-line-first"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-middle"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-last"></span>
+    </div>
+  </div>
+
+  <aside id="sidebar" class="sidebar">
+    <div class="sidebar-inner">
+
+      
+
+      
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap">
+            Table of Contents
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview-wrap">
+            Overview
+          </li>
+        </ul>
+      
+
+      <div class="site-overview-wrap sidebar-panel">
+        <div class="site-overview">
+          <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+            
+              <p class="site-author-name" itemprop="name">Ma Sicheng</p>
+              <div class="site-description motion-element" itemprop="description"></div>
+          </div>
+
+          
+            <nav class="site-state motion-element">
+              
+                <div class="site-state-item site-state-posts">
+                
+                  <a href="/archives/">
+                
+                    <span class="site-state-item-count">25</span>
+                    <span class="site-state-item-name">posts</span>
+                  </a>
+                </div>
+              
+
+              
+
+              
+            </nav>
+          
+
+          
+
+          
+
+          
+
+          
+
+          
+          
+
+          
+            
+          
+          
+
+        </div>
+      </div>
+
+      
+      <!--noindex-->
+        <div class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+            
+            
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#语法简析"><span class="nav-number">1.</span> <span class="nav-text">语法简析</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#动词（Verbs）的分类"><span class="nav-number">1.1.</span> <span class="nav-text">动词（Verbs）的分类</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#简单句的成分（Parts-Of-Speech）"><span class="nav-number">1.2.</span> <span class="nav-text">简单句的成分（Parts Of Speech）</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#词类"><span class="nav-number">1.3.</span> <span class="nav-text">词类</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#谓语动词的三大作用"><span class="nav-number">1.3.1.</span> <span class="nav-text">谓语动词的三大作用</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#助动词"><span class="nav-number">1.3.2.</span> <span class="nav-text">助动词</span></a></li></ol></li></ol></li></ol></div>
+            
+
+          </div>
+        </div>
+      <!--/noindex-->
+      
+
+      
+
+    </div>
+  </aside>
+  
+
+
+        
+      </div>
+    </main>
+
+    <footer id="footer" class="footer">
+      <div class="footer-inner">
+        <div class="copyright">&copy; <span itemprop="copyrightYear">2021</span>
+  <span class="with-love" id="animate">
+    <i class="fa fa-user"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">Ma Sicheng</span>
+
+  
+
+  
+</div>
+
+
+  <div class="powered-by">Powered by <a href="https://hexo.io" class="theme-link" rel="noopener" target="_blank">Hexo</a> v3.9.0</div>
+
+
+
+  <span class="post-meta-divider">|</span>
+
+
+
+  <div class="theme-info">Theme – <a href="https://theme-next.org" class="theme-link" rel="noopener" target="_blank">NexT.Muse</a> v7.0.1</div>
+
+
+
+
+        
+
+
+
+
+
+
+
+
+        
+      </div>
+    </footer>
+
+    
+      <div class="back-to-top">
+        <i class="fa fa-arrow-up"></i>
+        
+      </div>
+    
+
+    
+
+    
+
+    
+  </div>
+
+  
+
+<script>
+  if (Object.prototype.toString.call(window.Promise) !== '[object Function]') {
+    window.Promise = null;
+  }
+</script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  <script src="/lib/jquery/index.js?v=2.1.3"></script>
+
+  
+  <script src="/lib/velocity/velocity.min.js?v=1.2.1"></script>
+
+  
+  <script src="/lib/velocity/velocity.ui.min.js?v=1.2.1"></script>
+
+
+  
+
+
+  <script src="/js/src/utils.js?v=7.0.1"></script>
+
+  <script src="/js/src/motion.js?v=7.0.1"></script>
+
+
+
+  
+  
+
+
+  <script src="/js/src/schemes/muse.js?v=7.0.1"></script>
+
+
+
+  
+  <script src="/js/src/scrollspy.js?v=7.0.1"></script>
+<script src="/js/src/post-details.js?v=7.0.1"></script>
+
+
+
+  
+
+
+  <script src="/js/src/next-boot.js?v=7.0.1"></script>
+
+
+  
+
+  
+
+  
+
+  
+
+
+  
+
+
+  
+
+
+
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+</body>
+</html>
